@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Discount Calculator: Final Price After Discount and GST | CalcHub</title><meta name="description" content="Free discount calculator. Find the sale price, savings and effective discount."><meta name="robots" content="index,follow"><meta name="theme-color" content="#1d4ed8"><link rel="canonical" href="https://YOUR-DOMAIN.com/discount-calculator"><meta property="og:title" content="Discount Calculator: Final Price After Discount and GST | CalcHub"><meta property="og:description" content="Free discount calculator. Find the sale price, savings and effective discount."><meta property="og:type" content="website"><meta property="og:site_name" content="CalcHub"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Ctext x='32' y='45' font-size='38' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "CalcHub", "url": "https://YOUR-DOMAIN.com/", "publisher": {"@type": "Person", "name": "Dhriti Roy"}}</script><script>window.DEF="disc"</script><style>
+:root{--bg:#f6f8fb;--card:#fff;--tx:#14213d;--mu:#5b6b85;--pr:#1d4ed8;--pr2:#e8f0fe;--bd:#dde4ee;--ad:#eef1f6}
+
+:root[data-theme="dark"]{--bg:#0e1522;--card:#17202f;--tx:#e8eef8;--mu:#9aa8c0;--pr:#60a5fa;--pr2:#14284a;--bd:#27344a;--ad:#1b2536}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:960px;margin:0 auto;padding:0 16px}
+header{background:linear-gradient(135deg,#1d4ed8,#14213d);color:#fff;padding:36px 0 28px}
+header h1{margin:0 0 6px;font-size:clamp(24px,5vw,38px);line-height:1.2}
+header p{margin:0;opacity:.9}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:14px 0}
+.tabs button{flex:0 0 auto;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:9px 16px;border-radius:99px;font:600 14px inherit;cursor:pointer}
+.tabs button.on{background:var(--pr);color:#fff;border-color:var(--pr)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px;margin-bottom:16px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+label{display:block;font-size:13px;color:var(--mu);margin-bottom:4px}
+input,select{width:100%;padding:10px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font:16px inherit}
+.res{background:var(--pr2);border-radius:12px;padding:16px;margin-top:16px}
+.res .big{font-size:28px;font-weight:700;color:var(--pr)}
+.row{display:flex;justify-content:space-between;gap:10px;padding:4px 0;border-bottom:1px dashed var(--bd);font-size:15px}
+.row:last-child{border:0}
+.ad{background:var(--ad);border:1px dashed var(--bd);color:var(--mu);text-align:center;font-size:12px;padding:22px 8px;border-radius:10px;margin:16px 0;min-height:90px}
+h2{font-size:20px;margin:0 0 12px}
+.mu{color:var(--mu);font-size:14px}
+details{border-bottom:1px solid var(--bd);padding:10px 0}summary{cursor:pointer;font-weight:600}
+footer{background:var(--card);border-top:1px solid var(--bd);padding:24px 0;margin-top:24px;font-size:14px;color:var(--mu)}
+footer a{color:var(--pr);margin-right:12px}
+.pg{display:none}.pg:target{display:block}
+.pg.card{margin-top:16px}
+.hide{display:none}
+.cb{margin-top:16px;width:100%;padding:12px;border:0;border-radius:10px;background:#1d4ed8;color:#fff;font:700 16px inherit;cursor:pointer}
+.cb:hover{background:#1e40af}
+.dl{background:#14213d}.dl:hover{background:#0c1528}
+header{background:radial-gradient(circle at 85% 0,#3b82f6 0,transparent 45%),linear-gradient(135deg,#0b1f4d,#14213d);padding:50px 0 56px;text-align:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}.chips span{background:rgba(255,255,255,.15);padding:5px 13px;border-radius:99px;font-size:13px}
+.tabs{justify-content:center}.tabs button{padding:11px 20px;font-size:15px}.tabs button.on{background:#1d4ed8;border-color:#1d4ed8}
+.card{box-shadow:0 6px 22px rgba(20,33,61,.08)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}.pills button{padding:9px 16px;border:1.5px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:99px;font:600 14px inherit;cursor:pointer}.pills button.on{background:#1d4ed8;border-color:#1d4ed8;color:#fff}
+.eq{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:14px 0;text-align:center}.eq div{background:var(--card);border-radius:10px;padding:10px 14px;min-width:110px}.eq small{display:block;font-size:12px;color:var(--mu)}.eq span{font-size:22px;color:var(--mu)}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:16px}.st{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px;box-shadow:0 6px 22px rgba(20,33,61,.06)}.st i{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#1d4ed8;color:#fff;font-style:normal;font-weight:700;margin-bottom:8px}.st h3{margin:0 0 6px;font-size:16px}.st p{margin:0;font-size:14px;color:var(--mu)}.lk{cursor:pointer;transition:transform .15s}.lk:hover{transform:translateY(-3px)}
+.tb{width:100%;border-collapse:collapse;font-size:14px}
+.pills button small{display:block;font-size:11px;font-weight:400;opacity:.85}
+.th{display:flex;gap:6px;justify-content:flex-end;margin-bottom:10px}.th button{border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;border-radius:99px;padding:4px 12px;font:600 12px inherit;cursor:pointer}.th button.on{background:#fff;color:#14213d}
+.lg{display:flex;gap:6px;justify-content:center;margin-top:14px}.lg button{border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;border-radius:99px;padding:5px 16px;font:600 13px inherit;cursor:pointer}.lg button.on{background:#fff;color:#14213d}.rt{background:var(--pr2);color:var(--pr);padding:2px 12px;border-radius:99px}.it{border-top:1px solid var(--bd);padding-top:12px;margin-top:12px}.sec{background:#14213d}
+.tabs{flex-wrap:wrap}.two{flex-wrap:nowrap}.two button{flex:1;padding:8px 4px}.cw{margin-top:10px}.tb td,.tb th{padding:9px;border-bottom:1px solid var(--bd);text-align:left}
+
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3,.big,.lg0{font-family:Poppins,Inter,system-ui,sans-serif}
+.nv{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--bd)}
+.nvi{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 16px}
+.lg0{display:flex;align-items:center;gap:8px;font-weight:700;font-size:20px;color:var(--tx);text-decoration:none;margin-right:auto}
+.mk{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;background:#1d4ed8;color:#fff;font-size:17px}
+.nl{display:flex;gap:6px;flex-wrap:wrap}.nl a{padding:7px 14px;border-radius:99px;color:var(--tx);text-decoration:none;font-size:14px;font-weight:600}
+.nl a.hot{background:#1d4ed8;color:#fff}.nl a.hot2{border:1.5px solid #1d4ed8;color:var(--pr)}
+.nv .th{margin:0}.nv .th button{border-color:var(--bd);background:var(--bg);color:var(--tx)}.nv .th button.on{background:#1d4ed8;color:#fff;border-color:#1d4ed8}
+header h1{font-weight:700;letter-spacing:-.01em}
+.cta{display:inline-block;padding:12px 26px;border-radius:99px;font-weight:700;text-decoration:none;background:#fff;color:#0b1f4d;margin:18px 6px 0}.cta.ol{background:transparent;color:#fff;border:2px solid #fff;padding:10px 24px}
+.tabs a.tb2{flex:0 0 auto;padding:10px 20px;border:1.5px solid #1d4ed8;color:var(--pr);border-radius:99px;font-weight:700;font-size:15px;text-decoration:none;background:var(--card)}
+.tabs button[data-k="gst"]{border:1.5px solid #1d4ed8;font-weight:700}
+.pt{font-size:clamp(24px,4vw,32px);margin:18px 0 6px}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}.fg a{display:block;margin:5px 0;color:var(--pr);text-decoration:none}.fg b{color:var(--tx)}
+.fd{border-top:1px solid var(--bd);margin-top:18px;padding-top:14px;font-size:13px;line-height:1.6}
+.legal h1{font-size:28px;margin:0 0 4px}.legal h2{font-size:18px;margin:22px 0 6px}.legal p,.legal li{font-size:15px;color:var(--tx)}.legal ul{padding-left:20px}
+.rm{margin-top:6px;border:1px solid var(--bd);background:var(--bg);color:var(--mu);border-radius:8px;padding:6px 12px;cursor:pointer;font:13px inherit}
+.note{background:var(--pr2);border-left:4px solid #1d4ed8;padding:10px 14px;border-radius:8px;font-size:14px;margin:12px 0}
+.warn{color:#b45309;font-size:14px;margin-top:8px}
+</style></head><body>
+<nav class="nv"><div class="w nvi"><a class="lg0" href="index.html"><span class="mk">C</span>CalcHub</a><div class="nl"><a class="hot" href="gst-calculator.html">GST Calculator</a><a class="hot2" href="billing.html">Billing</a><a href="index.html">All Calculators</a><a href="contact.html">Contact</a></div><div class="th"><button id="tl" class="on" onclick="setTheme('light')">Light</button><button id="td" onclick="setTheme('dark')">Dark</button></div></div></nav><header><div class="w"><h1>Discount Calculator</h1><p>Fast, accurate and made for India · Updated for GST 2.0 and FY 2026-27</p><div><a class="cta" href="#gst">GST Calculator</a><a class="cta ol" href="billing.html">Billing: Invoice, Estimate, Receipt</a></div><div class="chips"><span>No sign-up</span><span>Instant results</span><span>Download as PDF</span><span>Made by Dhriti Roy</span></div><div class="lg"><button id="le" class="on" onclick="setLang('en')">English</button><button id="lh" onclick="setLang('hi')">हिन्दी</button></div></div></header>
+<main class="w">
+<div class="ad">Advertisement (top banner – AdSense slot)</div>
+<div class="tabs" id="tabs"></div>
+
+<section class="card" id="gst"><h2>GST Calculator (GST 2.0 slabs)</h2><div class="g">
+<div><label>Amount (₹)</label><input id="g1" type="number" value="10000"></div>
+<div><label>GST rate</label><input id="g2" type="hidden" value="18" data-t="18%"><div class="pills"><button type="button" onclick="pick('g2',0,'0%',this)">0%</button><button type="button" onclick="pick('g2',5,'5%',this)">5%</button><button type="button" class="on" onclick="pick('g2',18,'18%',this)">18%</button><button type="button" onclick="pick('g2',40,'40%',this)">40%</button><button type="button" onclick="pick('g2',3,'3% (gold/silver)',this)">3%</button><button type="button" onclick="pick('g2',0.25,'0.25% (rough diamonds)',this)">0.25%</button><button type="button" onclick="cust(this)">Custom</button></div><input id="gc" class="cw hide" type="number" step="0.01" placeholder="Enter your GST % (e.g. 12)"></div>
+<div><label>Tax</label><input id="g3" type="hidden" value="rem" data-t="Inclusive (remove GST)"><div class="pills two"><button type="button" class="on" onclick="pick('g3','rem','Inclusive (remove GST)',this)">Inclusive <small>(with GST)</small></button><button type="button" onclick="pick('g3','add','Exclusive (add GST)',this)">Exclusive <small>(without GST)</small></button></div></div></div>
+<button class="cb" onclick="run('gst')">Calculate</button><div class="res hide" id="gr"></div></section>
+
+<section class="card hide" id="emi"><h2>EMI Calculator</h2><div class="g">
+<div><label>Loan amount (₹)</label><input id="e1" type="number" value="2500000"></div>
+<div><label>Interest rate (% p.a.)</label><input id="e2" type="number" step="0.01" value="8.5"></div>
+<div><label>Tenure (years)</label><input id="e3" type="number" step="0.5" value="20"></div></div>
+<button class="cb" onclick="run('emi')">Calculate</button><div class="res hide" id="er"></div></section>
+
+<section class="card hide" id="sip"><h2>SIP Calculator</h2><div class="g">
+<div><label>Monthly investment (₹)</label><input id="s1" type="number" value="10000"></div>
+<div><label>Expected return (% p.a.)</label><input id="s2" type="number" step="0.1" value="12"></div>
+<div><label>Period (years)</label><input id="s3" type="number" value="15"></div></div>
+<button class="cb" onclick="run('sip')">Calculate</button><div class="res hide" id="sr"></div><p class="mu">Returns are assumptions, not guarantees. Mutual fund investments are subject to market risks.</p></section>
+
+<section class="card hide" id="tax"><h2>Income Tax Calculator FY 2026-27 (Tax Year 2026-27)</h2><div class="g">
+<div><label>Annual gross income (₹)</label><input id="t1" type="number" value="1500000"></div>
+<div><label>Salaried / pensioner?</label><select id="t2"><option value="1">Yes</option><option value="0">No</option></select></div>
+<div><label>Old regime: 80C (max 1.5L)</label><input id="t3" type="number" value="150000"></div>
+<div><label>Old regime: 80D</label><input id="t4" type="number" value="25000"></div>
+<div><label>Old regime: HRA exemption + other</label><input id="t5" type="number" value="0"></div>
+<div><label>Old regime: home loan interest (max 2L)</label><input id="t6" type="number" value="0"></div></div>
+<button class="cb" onclick="run('tax')">Calculate</button><div class="res hide" id="tr"></div>
+<p class="mu">Resident individuals below 60. Includes 4% cess and the rebate under Section 87A (Section 156 of the Income-tax Act, 2025) with marginal relief. Surcharge (income above ₹50 lakh), capital gains and other special-rate income are not included. This is an estimate, not tax advice.</p></section>
+
+<section class="card hide" id="hra"><h2>HRA Exemption Calculator</h2><div class="g">
+<div><label>Annual basic + DA (₹)</label><input id="h1" type="number" value="600000"></div>
+<div><label>Annual HRA received (₹)</label><input id="h2" type="number" value="240000"></div>
+<div><label>Annual rent paid (₹)</label><input id="h3" type="number" value="300000"></div>
+<div><label>City</label><select id="h4"><option value="0.5">Metro (Delhi, Mumbai, Kolkata, Chennai, Bengaluru, Hyderabad, Pune, Ahmedabad)</option><option value="0.4">Non-metro</option></select></div></div>
+<button class="cb" onclick="run('hra')">Calculate</button><div class="res hide" id="hr"></div><p class="mu">HRA exemption applies only under the old tax regime. The 8-city metro list follows the Income-tax Rules, 2026 (from 1 April 2026). All other cities use the 40% limit.</p></section>
+
+<section class='card hide' id='disc'><h2>Discount Calculator</h2><div class='g'><div><label>Original price (₹)</label><input id='d1' type='number' value='2000'></div><div><label>Discount (%)</label><input id='d2' type='number' value='20'></div><div><label>Extra discount (%, optional)</label><input id='d3' type='number' value='0'></div><div><label>GST on final price (%)</label><input id='d4' type='number' value='0'></div></div><button class='cb' onclick="run('disc')">Calculate</button><div class='res hide' id='dr'></div></section>
+<section class='card hide' id='rev'><h2>Revenue Forecaster</h2><div class='g'><div><label>Current monthly revenue (₹)</label><input id='r1' type='number' value='100000'></div><div><label>Expected monthly growth (%)</label><input id='r2' type='number' step='0.1' value='5'></div><div><label>Months to forecast (1-60)</label><input id='r3' type='number' value='12'></div></div><button class='cb' onclick="run('rev')">Calculate</button><div class='res hide' id='rr'></div><p class='mu'>This is a projection that assumes steady growth every month. Real results vary, so treat it as a planning guide, not a guarantee.</p></section>
+<section class='card hide' id='find'><h2>GST Rate Finder (GST 2.0)</h2><label>Search a product or service</label><input id='fq' placeholder='Try: butter, AC, shoes, car' oninput='fd()'><div id='fl' style='margin-top:12px'></div><p class='mu'>A quick guide only. The exact rate depends on the HSN/SAC code, so confirm on the official GST portal before billing.</p></section>
+<div class="ad">Advertisement (mid-page – AdSense slot)</div>
+<h2>How to use the GST calculator</h2>
+<div class="sg"><div class="st"><i>1</i><h3>Enter the amount</h3><p>Type the price of the goods or service.</p></div><div class="st"><i>2</i><h3>Pick the GST rate</h3><p>Choose the slab your product falls under.</p></div><div class="st"><i>3</i><h3>Exclusive or inclusive</h3><p>Say whether the price already includes GST.</p></div><div class="st"><i>4</i><h3>Press Calculate</h3><p>See the split instantly and download it as a PDF.</p></div></div>
+<section class="card"><h2>GST slabs in India (GST 2.0)</h2><div style="overflow-x:auto"><table class="tb"><tr><th>Rate</th><th>Applies to</th></tr><tr><td><b>0%</b></td><td>Exempt and essential items</td></tr><tr><td><b>5%</b></td><td>Merit goods and services</td></tr><tr><td><b>18%</b></td><td>Standard rate for most goods and services</td></tr><tr><td><b>40%</b></td><td>Luxury and demerit goods</td></tr><tr><td><b>3% / 0.25%</b></td><td>Special rates (gold and silver / rough diamonds)</td></tr></table></div><p class="mu">Rates changed with GST 2.0, so the old 12% and 28% slabs no longer apply. Always confirm the rate for your product on the official GST portal.</p></section>
+<h2>Types of GST</h2>
+<div class="sg"><div class="st"><h3>CGST</h3><p>Central GST, collected by the Centre on sales within a state.</p></div><div class="st"><h3>SGST</h3><p>State GST, collected by the state on sales within the state.</p></div><div class="st"><h3>IGST</h3><p>Integrated GST, charged on sales between states and on imports.</p></div><div class="st"><h3>UTGST</h3><p>Union Territory GST, charged in union territories along with CGST.</p></div></div>
+<h2>More free calculators</h2>
+<div class="sg"><a class="st lk" href="billing.html" style="text-decoration:none;color:inherit"><h3>Billing</h3><p>Invoice, estimate and receipt.</p></a><div class="st lk" onclick="show('emi');scrollTo(0,0)"><h3>EMI Calculator</h3><p>Plan your home, car or personal loan.</p></div><div class="st lk" onclick="show('sip');scrollTo(0,0)"><h3>SIP Calculator</h3><p>See how monthly investing grows.</p></div><div class="st lk" onclick="show('tax');scrollTo(0,0)"><h3>Income Tax</h3><p>Compare old and new regimes.</p></div><div class="st lk" onclick="show('hra');scrollTo(0,0)"><h3>HRA Exemption</h3><p>Find your tax-free HRA.</p></div></div>
+
+<section class="card"><h2>Frequently asked questions</h2>
+<details><summary>What are the GST rates now?</summary><p>After GST 2.0 the main slabs are 0%, 5%, 18% and 40%, with special rates of 3% and 0.25% on a few items.</p></details><details><summary>How is GST calculated?</summary><p>GST amount = amount × rate ÷ 100. To remove GST from an inclusive price, divide by (1 + rate ÷ 100).</p></details>
+<details><summary>How is EMI calculated?</summary><p>EMI = P × r × (1+r)ⁿ ÷ ((1+r)ⁿ − 1), where r is the monthly rate and n is the number of months.</p></details>
+<details><summary>Is income up to ₹12 lakh tax-free?</summary><p>Yes, for resident individuals under the new regime. Taxable income up to ₹12 lakh gets a full rebate under Section 87A (Section 156 of the Income-tax Act, 2025). With the ₹75,000 standard deduction, salaried people pay zero tax up to about ₹12.75 lakh. Special-rate income such as capital gains is not covered.</p></details>
+<details><summary>How is SIP return calculated?</summary><p>Future value = P × [((1+i)ⁿ − 1) ÷ i] × (1+i), where i is the monthly rate and n the number of monthly instalments.</p></details>
+</section>
+
+</main>
+<footer><div class="w"><div class="fg"><div><b class="lg0">CalcHub</b><p>Free financial calculators and billing tools for individuals and businesses in India.</p><p>Email: <a style="display:inline" href="mailto:hubcalc@gmail.com">hubcalc@gmail.com</a></p></div><div><b>Tools</b><a href="gst-calculator.html">GST Calculator</a><a href="billing.html">Billing: Invoice, Estimate, Receipt</a><a href="index.html">All Calculators</a></div><div><b>Legal</b><a href="privacy-policy.html">Privacy Policy</a><a href="terms-and-conditions.html">Terms and Conditions</a><a href="disclaimer.html">Disclaimer</a><a href="contact.html">Contact</a></div></div><p class="fd"><b>Disclaimer:</b> The calculations provided on this platform are for general information and preliminary estimation purposes only and do not constitute professional, financial, tax or legal advice. Users should consult a qualified Chartered Accountant (CA) or tax professional before making any final financial decisions or filing tax returns.</p><p>&copy; 2026 CalcHub. All rights reserved. Created by Dhriti Roy.</p></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+const $=id=>document.getElementById(id),v=id=>parseFloat($(id).value)||0;
+const f=n=>'₹'+Math.round(n).toLocaleString('en-IN');
+const f2=n=>'₹'+n.toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2});
+const r=(a,b)=>`<div class="row"><span>${a}</span><b>${b}</b></div>`;
+const T=[['gst','GST'],['emi','EMI'],['sip','SIP'],['tax','Income Tax'],['hra','HRA']];
+function pick(id,val,t,b){const i=$(id);i.value=val;i.dataset.t=t;b.parentNode.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));if(id==='g2')$('gc').classList.add('hide');reset('gst')}
+function setTheme(t){document.documentElement.dataset.theme=t;$('tl').classList.toggle('on',t==='light');$('td').classList.toggle('on',t==='dark');try{localStorage.setItem('th',t)}catch(e){}}
+setTheme((()=>{try{return localStorage.getItem('th')}catch(e){return null}})()||'light');
+/*LANG*/
+const H={'Free GST, EMI, SIP, Income Tax & HRA Calculators':'मुफ़्त GST, EMI, SIP, इनकम टैक्स और HRA कैलकुलेटर','Fast, accurate and made for India · Updated for GST 2.0 and FY 2026-27':'तेज़, सटीक और भारत के लिए बना · GST 2.0 और FY 2026-27 के अनुसार','No sign-up':'साइन-अप की ज़रूरत नहीं','Instant results':'तुरंत नतीजे','Download as PDF':'PDF डाउनलोड','Made by Dhriti Roy':'निर्माता: धृति रॉय','Light':'लाइट','Dark':'डार्क','Billing':'बिलिंग','Discount':'डिस्काउंट','Revenue Forecast':'राजस्व अनुमान','GST Rate Finder':'GST दर खोजें','Income Tax':'इनकम टैक्स','Please enter valid positive numbers':'कृपया सही धनात्मक संख्याएँ डालें','GST Calculator':'GST कैलकुलेटर','Billing: Invoice, Estimate, Receipt':'बिलिंग: इनवॉइस, एस्टिमेट, रसीद','Calculate':'गणना करें','Download result as PDF':'नतीजा PDF में डाउनलोड करें','+ Add another item':'+ एक और आइटम जोड़ें',
+'GST Calculator (GST 2.0 slabs)':'GST कैलकुलेटर (GST 2.0 स्लैब)','EMI Calculator':'EMI कैलकुलेटर','SIP Calculator':'SIP कैलकुलेटर','Income Tax Calculator FY 2026-27 (Tax Year 2026-27)':'इनकम टैक्स कैलकुलेटर FY 2026-27 (टैक्स ईयर 2026-27)','HRA Exemption Calculator':'HRA छूट कैलकुलेटर','Billing: Invoices, Estimates & Receipts':'बिलिंग: इनवॉइस, एस्टिमेट और रसीद','Discount Calculator':'डिस्काउंट कैलकुलेटर','Revenue Forecaster':'राजस्व अनुमान कैलकुलेटर','GST Rate Finder (GST 2.0)':'GST दर खोजक (GST 2.0)',
+'Amount (₹)':'राशि (₹)','GST rate':'GST दर','Custom':'कस्टम','Tax':'टैक्स','Inclusive':'इन्क्लूसिव','(with GST)':'(GST सहित)','Exclusive':'एक्सक्लूसिव','(without GST)':'(GST के बिना)',
+'Loan amount (₹)':'लोन राशि (₹)','Interest rate (% p.a.)':'ब्याज दर (% प्रति वर्ष)','Tenure (years)':'अवधि (वर्ष)','Monthly investment (₹)':'मासिक निवेश (₹)','Expected return (% p.a.)':'अनुमानित रिटर्न (% प्रति वर्ष)','Period (years)':'अवधि (वर्ष)',
+'Annual gross income (₹)':'वार्षिक कुल आय (₹)','Salaried / pensioner?':'वेतनभोगी / पेंशनभोगी?','Yes':'हाँ','No':'नहीं','Old regime: 80C (max 1.5L)':'पुरानी व्यवस्था: 80C (अधिकतम 1.5 लाख)','Old regime: 80D':'पुरानी व्यवस्था: 80D','Old regime: HRA exemption + other':'पुरानी व्यवस्था: HRA छूट + अन्य','Old regime: home loan interest (max 2L)':'पुरानी व्यवस्था: होम लोन ब्याज (अधिकतम 2 लाख)',
+'Annual basic + DA (₹)':'वार्षिक बेसिक + DA (₹)','Annual HRA received (₹)':'वार्षिक HRA प्राप्त (₹)','Annual rent paid (₹)':'वार्षिक किराया (₹)','City':'शहर','Metro (Delhi, Mumbai, Kolkata, Chennai, Bengaluru, Hyderabad, Pune, Ahmedabad)':'मेट्रो (दिल्ली, मुंबई, कोलकाता, चेन्नई, बेंगलुरु, हैदराबाद, पुणे, अहमदाबाद)','Non-metro':'नॉन-मेट्रो',
+'Create':'बनाएँ','Invoice':'इनवॉइस','Estimate':'एस्टिमेट','Receipt':'रसीद','Your business name':'आपके व्यवसाय का नाम','Your GSTIN':'आपका GSTIN','Customer name':'ग्राहक का नाम','Invoice number':'इनवॉइस नंबर','Supply type':'सप्लाई का प्रकार','Same state (CGST + SGST)':'एक ही राज्य (CGST + SGST)','Other state (IGST)':'दूसरा राज्य (IGST)','Payment mode (for receipts)':'भुगतान का तरीका (रसीद के लिए)','Cash':'नकद','Card':'कार्ड','Bank transfer':'बैंक ट्रांसफ़र','Item':'आइटम','Qty':'मात्रा','Rate (₹, excluding GST)':'दर (₹, GST के बिना)',
+'Original price (₹)':'असली कीमत (₹)','Discount (%)':'छूट (%)','Extra discount (%, optional)':'अतिरिक्त छूट (%, वैकल्पिक)','GST on final price (%)':'अंतिम कीमत पर GST (%)','Current monthly revenue (₹)':'मौजूदा मासिक राजस्व (₹)','Expected monthly growth (%)':'अपेक्षित मासिक वृद्धि (%)','Months to forecast (1-60)':'अनुमान के महीने (1-60)','Search a product or service':'उत्पाद या सेवा खोजें',
+'CGST (intra-state)':'CGST (राज्य के भीतर)','SGST / UTGST (intra-state)':'SGST / UTGST (राज्य के भीतर)','IGST (inter-state)':'IGST (दूसरे राज्य में)','Actual amount':'असली राशि','GST amount':'GST राशि','Total amount':'कुल राशि','Principal':'मूलधन','Total interest':'कुल ब्याज','Total payment':'कुल भुगतान','Amount invested':'निवेशित राशि','Estimated returns':'अनुमानित रिटर्न','New regime taxable income':'नई व्यवस्था में कर योग्य आय','New regime tax (incl. cess)':'नई व्यवस्था का टैक्स (सेस सहित)','Old regime taxable income':'पुरानी व्यवस्था में कर योग्य आय','Old regime tax (incl. cess)':'पुरानी व्यवस्था का टैक्स (सेस सहित)','Monthly TDS (best)':'मासिक TDS (सर्वोत्तम)','Actual HRA received':'प्राप्त वास्तविक HRA','Rent − 10% of basic':'किराया − बेसिक का 10%','Taxable HRA':'कर योग्य HRA','Taxable value':'कर योग्य मूल्य','Total GST':'कुल GST','Grand total':'कुल योग','Original price':'असली कीमत','First discount':'पहली छूट','Extra discount':'अतिरिक्त छूट','Total you save':'कुल बचत','Effective discount':'प्रभावी छूट','Price after discount':'छूट के बाद कीमत','Final payable':'अंतिम देय राशि','Average per month':'औसत प्रति माह','Growth vs today':'आज की तुलना में वृद्धि',
+'How to use the GST calculator':'GST कैलकुलेटर कैसे इस्तेमाल करें','Enter the amount':'राशि डालें','Type the price of the goods or service.':'वस्तु या सेवा की कीमत लिखें।','Pick the GST rate':'GST दर चुनें','Choose the slab your product falls under.':'अपने उत्पाद का स्लैब चुनें।','Exclusive or inclusive':'एक्सक्लूसिव या इन्क्लूसिव','Say whether the price already includes GST.':'बताएँ कि कीमत में GST शामिल है या नहीं।','Press Calculate':'गणना करें दबाएँ','See the split instantly and download it as a PDF.':'तुरंत विवरण देखें और PDF डाउनलोड करें।','GST slabs in India (GST 2.0)':'भारत में GST स्लैब (GST 2.0)','Types of GST':'GST के प्रकार','More free calculators':'और मुफ़्त कैलकुलेटर','HRA Exemption':'HRA छूट','Frequently asked questions':'अक्सर पूछे जाने वाले सवाल','What are the GST rates now?':'अभी GST दरें क्या हैं?','How is GST calculated?':'GST की गणना कैसे होती है?','How is EMI calculated?':'EMI की गणना कैसे होती है?','Is income up to ₹12 lakh tax-free?':'क्या ₹12 लाख तक की आय पर टैक्स नहीं लगता?','How is SIP return calculated?':'SIP रिटर्न की गणना कैसे होती है?','Privacy Policy':'प्राइवेसी पॉलिसी','Terms':'नियम व शर्तें','Disclaimer':'अस्वीकरण','Contact':'संपर्क'};
+const NM={Invoice:'इनवॉइस',Estimate:'एस्टिमेट',Receipt:'रसीद'};
+const RX=[[/^Total: /,'कुल: '],[/^You pay: /,'आप देंगे: '],[/^(Invoice|Estimate|Receipt) total: /,(m,a)=>NM[a]+' कुल: '],[/^Exempt: /,'छूट: '],[/^Month (\d+): /,'महीना $1: '],[/^Month (\d+)$/,'महीना $1'],[/^Total over (\d+) months$/,'$1 महीनों का कुल'],[/^(New|Old) regime saves you /,(m,a)=>(a==='New'?'नई':'पुरानी')+' व्यवस्था में बचत: '],[/ \/ month$/,' / माह'],[/^(\d+(\.\d+)?)% of basic$/,'$1% बेसिक']];
+let LG='en';const OG=new WeakMap();
+function trs(s){const t=s.trim();if(!t)return s;if(H[t])return s.replace(t,H[t]);const m=t.match(/^([^\p{L}\p{N}\s]+)\s+(.+)$/u);if(m&&H[m[2]])return s.replace(t,m[1]+' '+H[m[2]]);for(const[x,y]of RX)if(x.test(t))return s.replace(t,t.replace(x,y));return s}
+function applyLang(root){const w=document.createTreeWalker(root||document.body,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const p=n.parentNode.tagName;if(p==='SCRIPT'||p==='STYLE')continue;if(!OG.has(n))OG.set(n,n.nodeValue);n.nodeValue=LG==='hi'?trs(OG.get(n)):OG.get(n)}const q=$('fq');if(q)q.placeholder=LG==='hi'?'खोजें: butter, AC, shoes, car':'Try: butter, AC, shoes, car'}
+function setLang(l){LG=l;$('le').classList.toggle('on',l==='en');$('lh').classList.toggle('on',l==='hi');document.documentElement.lang=l;applyLang()}
+/*ENDLANG*/
+function cust(b){b.parentNode.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));const c=$('gc');c.classList.remove('hide');c.focus();$('g2').value=c.value||0;$('g2').dataset.t=(c.value||0)+'% (custom)';reset('gst')}
+T.push(['disc','Discount'],['rev','Revenue Forecast'],['find','GST Rate Finder']);
+$('tabs').innerHTML=T.map(([k,n])=>`<button data-k="${k}">${n}</button>`).join('');
+$('tabs').children[0].insertAdjacentHTML('afterend','<a class="tb2" href="billing.html">Billing</a>');
+function show(k){T.forEach(([x])=>$(x).classList.toggle('hide',x!==k));document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.k===k))}
+$('tabs').onclick=e=>{if(e.target.dataset.k)show(e.target.dataset.k)};const hv=i=>{const h=window.DEF||location.hash.slice(1);if(T.some(t=>t[0]===h))show(h);else if(i)show('gst')};hv(1);addEventListener('hashchange',()=>hv());
+
+function gst(){const a=v('g1'),p=v('g2')/100,m=$('g3').value;let base,tax;
+ if(m==='add'){base=a;tax=a*p}else{base=a/(1+p);tax=a-base}
+ $('gr').innerHTML=`<div class="big">Total: ${f2(base+tax)}</div><div class="eq"><div><small>Actual amount</small><b>${f2(base)}</b></div><span>+</span><div><small>GST amount</small><b>${f2(tax)}</b></div><span>=</span><div><small>Total amount</small><b>${f2(base+tax)}</b></div></div>`+r('CGST (intra-state)',f2(tax/2))+r('SGST / UTGST (intra-state)',f2(tax/2))+r('IGST (inter-state)',f2(tax))}
+function emi(){const P=v('e1'),i=v('e2')/1200,n=v('e3')*12;
+ const e=i?P*i*Math.pow(1+i,n)/(Math.pow(1+i,n)-1):P/n,tot=e*n;
+ $('er').innerHTML=`<div class="big">${f(e)} / month</div>`+r('Principal',f(P))+r('Total interest',f(tot-P))+r('Total payment',f(tot))}
+function sip(){const P=v('s1'),i=v('s2')/1200,n=v('s3')*12;
+ const fv=i?P*((Math.pow(1+i,n)-1)/i)*(1+i):P*n,inv=P*n;
+ $('sr').innerHTML=`<div class="big">${f(fv)}</div>`+r('Amount invested',f(inv))+r('Estimated returns',f(fv-inv))}
+function slab(x,s){let t=0,prev=0;for(const[l,rt]of s){if(x>prev)t+=(Math.min(x,l)-prev)*rt;prev=l}return t}
+const NEW=[[4e5,0],[8e5,.05],[12e5,.1],[16e5,.15],[20e5,.2],[24e5,.25],[Infinity,.3]];
+const OLD=[[2.5e5,0],[5e5,.05],[10e5,.2],[Infinity,.3]];
+function tax(){const g=v('t1'),s=+$('t2').value;
+ const tn=Math.max(0,g-75000*s);let nt=slab(tn,NEW);
+ if(tn<=12e5)nt=0;else nt=Math.min(nt,tn-12e5);
+ const d=Math.min(v('t3'),15e4)+v('t4')+v('t5')+Math.min(v('t6'),2e5);
+ const to=Math.max(0,g-50000*s-d);let ot=slab(to,OLD);if(to<=5e5)ot=0;
+ const N=nt*1.04,O=ot*1.04,best=N<=O?'New regime':'Old regime';
+ $('tr').innerHTML=`<div class="big">${best} saves you ${f(Math.abs(N-O))}</div>`+
+ r('New regime taxable income',f(tn))+r('New regime tax (incl. cess)',f(N))+
+ r('Old regime taxable income',f(to))+r('Old regime tax (incl. cess)',f(O))+
+ r('Monthly TDS (best)',f(Math.min(N,O)/12))}
+function hra(){const b=v('h1'),h=v('h2'),rent=v('h3'),p=+$('h4').value;
+ const a=h,c=Math.max(0,rent-.1*b),d=p*b,ex=Math.min(a,c,d);
+ $('hr').innerHTML=`<div class="big">Exempt: ${f(ex)}</div>`+r('Actual HRA received',f(a))+r('Rent − 10% of basic',f(c))+r((p*100)+'% of basic',f(d))+r('Taxable HRA',f(h-ex))}
+
+const D=[['UHT milk',0],['Paneer (pre-packaged)',0],['Roti, paratha',0],['Notebooks and exercise books',0],['Fresh fruits and vegetables',0],['Life-saving drugs',0],['Life and health insurance (individual)',0],['Butter, ghee, cheese',5],['Namkeen, biscuits, pasta, cereals',5],['Condensed milk',5],['Fruit juice, packaged coconut water',5],['Apparel up to ₹2,500',5],['Footwear up to ₹2,500',5],['Umbrellas',5],['Apparel above ₹2,500',18],['Television',18],['Air conditioner',18],['Refrigerator',18],['Mobile phone',18],['Cement',18],['Small and mid-size cars',18],['Motorcycle up to 350cc',18],['Buses, trucks, ambulances',18],['Hotel room (₹1,000-₹7,500 per day)',18],['Aerated and sugary drinks',40],['Cigarettes, pan masala, gutkha',40],['Luxury cars',40],['Motorcycle above 350cc',40],['Private jets and yachts',40],['Gold, silver and gold jewellery',3],['Rough diamonds',0.25],['Cut and polished diamonds',1.5]];
+function fd(){const q=$('fq').value.toLowerCase();$('fl').innerHTML=D.filter(x=>x[0].toLowerCase().includes(q)).map(x=>`<div class='row'><span>${x[0]}</span><b class='rt'>${x[1]}%</b></div>`).join('')||'<p class="mu">No match. Check the HSN code on the GST portal.</p>'}
+function disc(){const p=v('d1'),a=p*v('d2')/100,b=(p-a)*v('d3')/100,n=p-a-b,g=n*v('d4')/100;$('dr').innerHTML=`<div class='big'>You pay: ${f2(n+g)}</div>`+r('Original price',f2(p))+r('First discount',f2(a))+r('Extra discount',f2(b))+r('Total you save',f2(a+b))+r('Effective discount',(p?(a+b)/p*100:0).toFixed(2)+'%')+r('Price after discount',f2(n))+r('GST',f2(g))+r('Final payable',f2(n+g))}
+function rev(){const R=v('r1'),g=v('r2')/100,n=Math.min(60,Math.max(1,Math.round(v('r3'))));let tot=0,rr='';for(let m=1;m<=n;m++){const x=R*Math.pow(1+g,m);tot+=x;if(m%3===0&&m!==n)rr+=r('Month '+m,f(x))}const L=R*Math.pow(1+g,n);$('rr').innerHTML=`<div class='big'>Month ${n}: ${f(L)}</div>`+rr+r('Month '+n,f(L))+r('Total over '+n+' months',f(tot))+r('Average per month',f(tot/n))+r('Growth vs today',(R?(L/R-1)*100:0).toFixed(1)+'%')}
+const M={gst,emi,sip,tax,hra,disc,rev};fd();$('gc').addEventListener('input',e=>{$('g2').value=e.target.value||0;$('g2').dataset.t=(e.target.value||0)+'% (custom)'});
+function run(k){M[k]();const s=document.querySelector('#'+k+' .res');if([...document.querySelectorAll('#'+k+' input[type=number]')].some(i=>+i.value<0)||/NaN|Infinity/.test(s.textContent)){s.innerHTML="<div class='big'>Please enter valid positive numbers</div>";s.classList.remove('hide');applyLang(s);return}s.insertAdjacentHTML('beforeend','<button class="cb dl" onclick="dl(\''+k+'\')">Download result as PDF</button>');s.classList.remove('hide');applyLang(s)}
+const cl=s=>String(s).replace(/₹/g,'Rs. ').replace(/[−–]/g,'-').replace(/[·×÷]/g,' ').replace(/\s+/g,' ').trim();
+async function getD(){if(window.claude&&claude.use)return claude.use('downloads');return{save:async({filename,data})=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([data],{type:'application/pdf'}));a.download=filename;a.click()}}}
+async function dl(k){
+ const sec=$(k),J=window.jspdf&&window.jspdf.jsPDF;if(!J){alert('PDF tool could not load. Check your internet connection.');return}
+ const d=await getD();if(!d){alert('Download is not available in this view.');return}
+ const L=LG;if(L==='hi'){LG='en';applyLang()}
+ const doc=new J(),W=210;let y=0;
+ doc.setFillColor(29,78,216);doc.rect(0,0,W,34,'F');doc.setTextColor(255);doc.setFont('helvetica','bold');doc.setFontSize(18);doc.text(cl(sec.querySelector('h2').textContent),15,17);
+ doc.setFont('helvetica','normal');doc.setFontSize(10);doc.text('Generated on '+new Date().toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'})+'  |  Prepared by Dhriti Roy',15,26);
+ doc.setTextColor(20,33,61);y=48;
+ const head=t=>{doc.setFont('helvetica','bold');doc.setFontSize(13);doc.text(t,15,y);doc.setDrawColor(29,78,216);doc.line(15,y+2,195,y+2);y+=11;doc.setFontSize(11)};
+ const row=(a,b)=>{doc.setFont('helvetica','normal');doc.text(cl(a),15,y);doc.setFont('helvetica','bold');doc.text(cl(b),195,y,{align:'right'});y+=8;if(y>270){doc.addPage();y=20}};
+ head('Inputs');
+ sec.querySelectorAll('.g > div').forEach(x=>{const i=x.querySelector('input,select');row(x.querySelector('label').textContent,i.dataset.t||(i.tagName==='SELECT'?i.selectedOptions[0].text:Number(i.value).toLocaleString('en-IN')))});
+ y+=6;head('Result');
+ const res=sec.querySelector('.res');
+ doc.setFontSize(15);doc.setTextColor(29,78,216);doc.setFont('helvetica','bold');const bg=doc.splitTextToSize(cl(res.querySelector('.big').textContent),180);doc.text(bg,15,y);y+=bg.length*8+4;doc.setTextColor(20,33,61);doc.setFontSize(11);
+ res.querySelectorAll('.row').forEach(x=>row(x.children[0].textContent,x.children[1].textContent));
+ doc.setFont('helvetica','italic');doc.setFontSize(8);doc.setTextColor(110);
+ doc.text(doc.splitTextToSize('Disclaimer: Results are estimates for information only and are not financial, tax or legal advice. Please confirm with a qualified professional.',180),15,284);
+ if(L==='hi'){LG='hi';applyLang()}
+ try{await d.save({filename:k+'-calculator-result.pdf',data:doc.output('arraybuffer')})}catch(e){if(e&&e.code!=='declined')alert('Could not save the PDF ('+(e.code||'error')+').')}
+}
+function reset(k){document.querySelector('#'+k+' .res').classList.add('hide')}
+Object.keys(M).forEach(k=>{document.querySelectorAll('#'+k+' input,#'+k+' select').forEach(e=>{e.oninput=()=>reset(k);e.onchange=()=>reset(k);e.onkeydown=ev=>{if(ev.key==='Enter'){ev.preventDefault();run(k)}}})});
+</script>
+</body></html>

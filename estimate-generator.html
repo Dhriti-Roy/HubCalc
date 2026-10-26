@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Free Estimate and Quotation Generator with PDF | CalcHub</title><meta name="description" content="Create an estimate or quotation with validity date and terms and download it as a PDF."><meta name="robots" content="index,follow"><meta name="theme-color" content="#1d4ed8"><link rel="canonical" href="https://YOUR-DOMAIN.com/estimate-generator"><meta property="og:title" content="Free Estimate and Quotation Generator with PDF | CalcHub"><meta property="og:description" content="Create an estimate or quotation with validity date and terms and download it as a PDF."><meta property="og:type" content="website"><meta property="og:site_name" content="CalcHub"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Ctext x='32' y='45' font-size='38' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet"><script>window.DOCT="estimate"</script><style>
+:root{--bg:#f6f8fb;--card:#fff;--tx:#14213d;--mu:#5b6b85;--pr:#1d4ed8;--pr2:#e8f0fe;--bd:#dde4ee;--ad:#eef1f6}
+
+:root[data-theme="dark"]{--bg:#0e1522;--card:#17202f;--tx:#e8eef8;--mu:#9aa8c0;--pr:#60a5fa;--pr2:#14284a;--bd:#27344a;--ad:#1b2536}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:960px;margin:0 auto;padding:0 16px}
+header{background:linear-gradient(135deg,#1d4ed8,#14213d);color:#fff;padding:36px 0 28px}
+header h1{margin:0 0 6px;font-size:clamp(24px,5vw,38px);line-height:1.2}
+header p{margin:0;opacity:.9}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:14px 0}
+.tabs button{flex:0 0 auto;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:9px 16px;border-radius:99px;font:600 14px inherit;cursor:pointer}
+.tabs button.on{background:var(--pr);color:#fff;border-color:var(--pr)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px;margin-bottom:16px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+label{display:block;font-size:13px;color:var(--mu);margin-bottom:4px}
+input,select{width:100%;padding:10px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font:16px inherit}
+.res{background:var(--pr2);border-radius:12px;padding:16px;margin-top:16px}
+.res .big{font-size:28px;font-weight:700;color:var(--pr)}
+.row{display:flex;justify-content:space-between;gap:10px;padding:4px 0;border-bottom:1px dashed var(--bd);font-size:15px}
+.row:last-child{border:0}
+.ad{background:var(--ad);border:1px dashed var(--bd);color:var(--mu);text-align:center;font-size:12px;padding:22px 8px;border-radius:10px;margin:16px 0;min-height:90px}
+h2{font-size:20px;margin:0 0 12px}
+.mu{color:var(--mu);font-size:14px}
+details{border-bottom:1px solid var(--bd);padding:10px 0}summary{cursor:pointer;font-weight:600}
+footer{background:var(--card);border-top:1px solid var(--bd);padding:24px 0;margin-top:24px;font-size:14px;color:var(--mu)}
+footer a{color:var(--pr);margin-right:12px}
+.pg{display:none}.pg:target{display:block}
+.pg.card{margin-top:16px}
+.hide{display:none}
+.cb{margin-top:16px;width:100%;padding:12px;border:0;border-radius:10px;background:#1d4ed8;color:#fff;font:700 16px inherit;cursor:pointer}
+.cb:hover{background:#1e40af}
+.dl{background:#14213d}.dl:hover{background:#0c1528}
+header{background:radial-gradient(circle at 85% 0,#3b82f6 0,transparent 45%),linear-gradient(135deg,#0b1f4d,#14213d);padding:50px 0 56px;text-align:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}.chips span{background:rgba(255,255,255,.15);padding:5px 13px;border-radius:99px;font-size:13px}
+.tabs{justify-content:center}.tabs button{padding:11px 20px;font-size:15px}.tabs button.on{background:#1d4ed8;border-color:#1d4ed8}
+.card{box-shadow:0 6px 22px rgba(20,33,61,.08)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}.pills button{padding:9px 16px;border:1.5px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:99px;font:600 14px inherit;cursor:pointer}.pills button.on{background:#1d4ed8;border-color:#1d4ed8;color:#fff}
+.eq{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:14px 0;text-align:center}.eq div{background:var(--card);border-radius:10px;padding:10px 14px;min-width:110px}.eq small{display:block;font-size:12px;color:var(--mu)}.eq span{font-size:22px;color:var(--mu)}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:16px}.st{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px;box-shadow:0 6px 22px rgba(20,33,61,.06)}.st i{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#1d4ed8;color:#fff;font-style:normal;font-weight:700;margin-bottom:8px}.st h3{margin:0 0 6px;font-size:16px}.st p{margin:0;font-size:14px;color:var(--mu)}.lk{cursor:pointer;transition:transform .15s}.lk:hover{transform:translateY(-3px)}
+.tb{width:100%;border-collapse:collapse;font-size:14px}
+.pills button small{display:block;font-size:11px;font-weight:400;opacity:.85}
+.th{display:flex;gap:6px;justify-content:flex-end;margin-bottom:10px}.th button{border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;border-radius:99px;padding:4px 12px;font:600 12px inherit;cursor:pointer}.th button.on{background:#fff;color:#14213d}
+.lg{display:flex;gap:6px;justify-content:center;margin-top:14px}.lg button{border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;border-radius:99px;padding:5px 16px;font:600 13px inherit;cursor:pointer}.lg button.on{background:#fff;color:#14213d}.rt{background:var(--pr2);color:var(--pr);padding:2px 12px;border-radius:99px}.it{border-top:1px solid var(--bd);padding-top:12px;margin-top:12px}.sec{background:#14213d}
+.tabs{flex-wrap:wrap}.two{flex-wrap:nowrap}.two button{flex:1;padding:8px 4px}.cw{margin-top:10px}.tb td,.tb th{padding:9px;border-bottom:1px solid var(--bd);text-align:left}
+
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3,.big,.lg0{font-family:Poppins,Inter,system-ui,sans-serif}
+.nv{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--bd)}
+.nvi{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 16px}
+.lg0{display:flex;align-items:center;gap:8px;font-weight:700;font-size:20px;color:var(--tx);text-decoration:none;margin-right:auto}
+.mk{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;background:#1d4ed8;color:#fff;font-size:17px}
+.nl{display:flex;gap:6px;flex-wrap:wrap}.nl a{padding:7px 14px;border-radius:99px;color:var(--tx);text-decoration:none;font-size:14px;font-weight:600}
+.nl a.hot{background:#1d4ed8;color:#fff}.nl a.hot2{border:1.5px solid #1d4ed8;color:var(--pr)}
+.nv .th{margin:0}.nv .th button{border-color:var(--bd);background:var(--bg);color:var(--tx)}.nv .th button.on{background:#1d4ed8;color:#fff;border-color:#1d4ed8}
+header h1{font-weight:700;letter-spacing:-.01em}
+.cta{display:inline-block;padding:12px 26px;border-radius:99px;font-weight:700;text-decoration:none;background:#fff;color:#0b1f4d;margin:18px 6px 0}.cta.ol{background:transparent;color:#fff;border:2px solid #fff;padding:10px 24px}
+.tabs a.tb2{flex:0 0 auto;padding:10px 20px;border:1.5px solid #1d4ed8;color:var(--pr);border-radius:99px;font-weight:700;font-size:15px;text-decoration:none;background:var(--card)}
+.tabs button[data-k="gst"]{border:1.5px solid #1d4ed8;font-weight:700}
+.pt{font-size:clamp(24px,4vw,32px);margin:18px 0 6px}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}.fg a{display:block;margin:5px 0;color:var(--pr);text-decoration:none}.fg b{color:var(--tx)}
+.fd{border-top:1px solid var(--bd);margin-top:18px;padding-top:14px;font-size:13px;line-height:1.6}
+.legal h1{font-size:28px;margin:0 0 4px}.legal h2{font-size:18px;margin:22px 0 6px}.legal p,.legal li{font-size:15px;color:var(--tx)}.legal ul{padding-left:20px}
+.rm{margin-top:6px;border:1px solid var(--bd);background:var(--bg);color:var(--mu);border-radius:8px;padding:6px 12px;cursor:pointer;font:13px inherit}
+.note{background:var(--pr2);border-left:4px solid #1d4ed8;padding:10px 14px;border-radius:8px;font-size:14px;margin:12px 0}
+.warn{color:#b45309;font-size:14px;margin-top:8px}
+</style></head><body>
+<nav class="nv"><div class="w nvi"><a class="lg0" href="index.html"><span class="mk">C</span>CalcHub</a><div class="nl"><a class="hot" href="gst-calculator.html">GST Calculator</a><a class="hot2" href="billing.html">Billing</a><a href="index.html">All Calculators</a><a href="contact.html">Contact</a></div><div class="th"><button id="tl" class="on" onclick="setTheme('light')">Light</button><button id="td" onclick="setTheme('dark')">Dark</button></div></div></nav>
+<main class="w">
+<div class="ad">Advertisement</div>
+<h1 class="pt">Billing: Invoice, Estimate and Receipt</h1>
+<p class="mu">Three different financial documents, each prepared in its own correct format. Choose a document, fill in the details and press Calculate.</p>
+<div class="tabs" id="dt"><button data-k="invoice">Tax Invoice</button><button data-k="estimate">Estimate / Quotation</button><button data-k="receipt">Payment Receipt</button></div>
+<div class="note" id="dd"></div>
+<section class="card"><h2>Your business details</h2><div class="g">
+<div><label>Business name</label><input id="b1" placeholder="Registered or trade name"></div>
+<div><label>Address</label><input id="b2" placeholder="Street, city, state, PIN"></div>
+<div><label>GSTIN (required for a tax invoice)</label><input id="b3" placeholder="e.g. 10ABCDE1234F1Z5" maxlength="15"></div>
+<div><label>Phone or email (optional)</label><input id="b4"></div></div></section>
+
+<section class="card hide" id="invoice"><h2>Tax Invoice</h2><div class="g">
+<div><label>Customer name</label><input id="v1"></div>
+<div><label>Customer address</label><input id="v2"></div>
+<div><label>Customer GSTIN (if registered)</label><input id="v3" maxlength="15"></div>
+<div><label>Invoice number (max 16 characters)</label><input id="v4" value="INV/2026/001" maxlength="16"></div>
+<div><label>Invoice date</label><input id="v5" type="date"></div>
+<div><label>Due date (optional)</label><input id="v6" type="date"></div>
+<div><label>Place of supply (state and code)</label><input id="v7" placeholder="e.g. Bihar (10)"></div>
+<div><label>Supply type</label><select id="v8"><option value="intra">Within the same state (CGST + SGST)</option><option value="inter">To another state (IGST)</option></select></div>
+<div><label>Tax payable on reverse charge</label><select id="v9"><option>No</option><option>Yes</option></select></div>
+<div><label>Bank details or notes (optional)</label><input id="v10"></div></div>
+<h2 style="margin-top:20px">Items</h2><div id="invoicei"></div>
+<button class="cb sec" type="button" onclick="addItem('invoice')">Add another item</button>
+<button class="cb" type="button" onclick="run('invoice')">Calculate</button><div class="res hide" id="invoicer"></div></section>
+
+<section class="card hide" id="estimate"><h2>Estimate / Quotation</h2><div class="g">
+<div><label>Prepared for (customer name)</label><input id="e1"></div>
+<div><label>Customer address</label><input id="e2"></div>
+<div><label>Estimate number</label><input id="e3" value="EST-001" maxlength="20"></div>
+<div><label>Estimate date</label><input id="e4" type="date"></div>
+<div><label>Valid until</label><input id="e5" type="date"></div>
+<div><label>Terms and conditions</label><input id="e6" value="Prices are estimates and may change. GST will be charged at the rate applicable at the time of invoicing."></div></div>
+<h2 style="margin-top:20px">Items</h2><div id="estimatei"></div>
+<button class="cb sec" type="button" onclick="addItem('estimate')">Add another item</button>
+<button class="cb" type="button" onclick="run('estimate')">Calculate</button><div class="res hide" id="estimater"></div></section>
+
+<section class="card hide" id="receipt"><h2>Payment Receipt</h2><div class="g">
+<div><label>Received from</label><input id="r1"></div>
+<div><label>Address (optional)</label><input id="r2"></div>
+<div><label>Receipt number</label><input id="r3" value="RCT-001" maxlength="20"></div>
+<div><label>Receipt date</label><input id="r4" type="date"></div>
+<div><label>Amount received (&#8377;)</label><input id="r5" type="number" step="any" value="10000"></div>
+<div><label>Payment mode</label><select id="r6"><option>UPI</option><option>Bank transfer (NEFT/RTGS/IMPS)</option><option>Cheque</option><option>Card</option><option>Cash</option></select></div>
+<div><label>Transaction or cheque reference</label><input id="r7"></div>
+<div><label>Payment type</label><select id="r8"><option>Full payment</option><option>Part payment</option><option>Advance payment</option></select></div>
+<div><label>Against invoice number (optional)</label><input id="r9" maxlength="16"></div>
+<div><label>Total invoice amount (&#8377;, optional)</label><input id="r10" type="number" step="any"></div>
+<div><label>Payment received towards</label><input id="r11" placeholder="e.g. Web design services"></div></div>
+<button class="cb" type="button" onclick="run('receipt')">Calculate</button><div class="res hide" id="receiptr"></div></section>
+
+<div class="ad">Advertisement</div>
+<section class="card"><h2>How these three documents differ</h2><div class="sg">
+<div class="st"><h3>Tax Invoice</h3><p>A legal document for a supply of goods or services. It carries your GSTIN, a unique invoice number, HSN or SAC codes, place of supply and the GST charged, and is used by the buyer to claim input tax credit.</p></div>
+<div class="st"><h3>Estimate / Quotation</h3><p>A price proposal sent before the work or sale. It is not a tax invoice, carries no tax liability, has a validity date and terms, and the customer may accept it.</p></div>
+<div class="st"><h3>Payment Receipt</h3><p>Acknowledges money actually received. It records the amount, mode, reference and what the payment is for, and is not a tax invoice.</p></div></div></section>
+</main>
+<footer><div class="w"><div class="fg"><div><b class="lg0">CalcHub</b><p>Free financial calculators and billing tools for individuals and businesses in India.</p><p>Email: <a style="display:inline" href="mailto:hubcalc@gmail.com">hubcalc@gmail.com</a></p></div><div><b>Tools</b><a href="gst-calculator.html">GST Calculator</a><a href="billing.html">Billing: Invoice, Estimate, Receipt</a><a href="index.html">All Calculators</a></div><div><b>Legal</b><a href="privacy-policy.html">Privacy Policy</a><a href="terms-and-conditions.html">Terms and Conditions</a><a href="disclaimer.html">Disclaimer</a><a href="contact.html">Contact</a></div></div><p class="fd"><b>Disclaimer:</b> The calculations provided on this platform are for general information and preliminary estimation purposes only and do not constitute professional, financial, tax or legal advice. Users should consult a qualified Chartered Accountant (CA) or tax professional before making any final financial decisions or filing tax returns.</p><p>&copy; 2026 CalcHub. All rights reserved. Created by Dhriti Roy.</p></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+const $=id=>document.getElementById(id),V=id=>$(id).value.trim();
+function setTheme(t){document.documentElement.dataset.theme=t;$('tl').classList.toggle('on',t==='light');$('td').classList.toggle('on',t==='dark');try{localStorage.setItem('th',t)}catch(e){}}
+setTheme((()=>{try{return localStorage.getItem('th')}catch(e){return null}})()||'light');
+const r2=n=>Math.round((n+Number.EPSILON)*100)/100;
+const nf=n=>n.toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2});
+const f2=n=>'\u20b9'+nf(n);
+const cl=s=>String(s).replace(/\u20b9/g,'Rs. ').replace(/[\u2212\u2013]/g,'-').replace(/\s+/g,' ').trim();
+const GST_RE=/^(0[1-9]|[12]\d|3[0-8])[A-Z]{5}\d{4}[A-Z][1-9A-Z]Z[0-9A-Z]$/;
+const INV_RE=/^[A-Za-z0-9\/-]{1,16}$/;
+const today=()=>new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
+const addDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};
+const dm=s=>s?s.split('-').reverse().join('-'):'-';
+function words(v){let n=Math.round(v*100),r=Math.floor(n/100),p=n%100;
+ const a=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'],b=['','','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety'];
+ const w=x=>x<20?a[x]:b[Math.floor(x/10)]+(x%10?' '+a[x%10]:''),t=x=>x>=100?a[Math.floor(x/100)]+' Hundred'+(x%100?' '+w(x%100):''):w(x);
+ let s='';const cr=Math.floor(r/1e7);r%=1e7;const lk=Math.floor(r/1e5);r%=1e5;const th=Math.floor(r/1e3);r%=1e3;
+ if(cr)s+=t(cr)+' Crore ';if(lk)s+=t(lk)+' Lakh ';if(th)s+=t(th)+' Thousand ';if(r)s+=t(r);
+ s=s.trim();if(!s&&!p)s='Zero';return 'Rupees '+(s||'Zero')+(p?' and '+w(p)+' Paise':'')+' Only'}
+function lineCalc(o){o.a=r2(o.q*o.p);o.x=r2(o.a*o.t/100);return o}
+function totals(L,intra){const taxable=r2(L.reduce((s,o)=>s+o.a,0)),tax=r2(L.reduce((s,o)=>s+o.x,0));
+ const cg=Math.floor(tax*100/2)/100,sg=r2(tax-cg),grand=r2(taxable+tax),total=Math.round(grand);
+ return {taxable,tax,cgst:intra?cg:0,sgst:intra?sg:0,igst:intra?0:tax,grand,round:r2(total-grand),total}}
+function checkItems(L,err){if(!L.length)err.push('Add at least one item.');L.forEach((o,i)=>{if(!o.d)err.push('Item '+(i+1)+': enter a description.');if(!(o.q>0))err.push('Item '+(i+1)+': quantity must be greater than zero.');if(!(o.p>=0))err.push('Item '+(i+1)+': enter a valid rate.')})}
+function calcInvoice(o){const err=[];if(!o.bn)err.push('Enter your business name.');if(!o.ba)err.push('Enter your address.');
+ if(!GST_RE.test(o.bg))err.push('Enter a valid 15-character GSTIN for your business.');
+ if(o.cg&&!GST_RE.test(o.cg))err.push('Customer GSTIN is not in a valid format.');
+ if(!o.cn)err.push('Enter the customer name.');if(!o.ca)err.push('Enter the customer address.');
+ if(!INV_RE.test(o.no))err.push('Invoice number must be 1 to 16 characters using letters, numbers, hyphen or slash.');
+ if(!o.dt)err.push('Select the invoice date.');if(o.due&&o.dt&&o.due<o.dt)err.push('Due date cannot be before the invoice date.');
+ if(!o.pos)err.push('Enter the place of supply.');
+ o.L=o.L.map(lineCalc);checkItems(o.L,err);o.T=totals(o.L,o.sup==='intra');return {err,o}}
+function calcEstimate(o){const err=[];if(!o.bn)err.push('Enter your business name.');if(!o.ba)err.push('Enter your address.');
+ if(o.bg&&!GST_RE.test(o.bg))err.push('Your GSTIN is not in a valid format.');
+ if(!o.cn)err.push('Enter the customer name.');if(!o.no)err.push('Enter the estimate number.');if(!o.dt)err.push('Select the estimate date.');
+ if(!o.vu)err.push('Select the validity date.');else if(o.dt&&o.vu<o.dt)err.push('Valid-until date cannot be before the estimate date.');
+ o.L=o.L.map(lineCalc);checkItems(o.L,err);o.T=totals(o.L,true);return {err,o}}
+function calcReceipt(o){const err=[],warn=[];if(!o.bn)err.push('Enter your business name.');if(!o.ba)err.push('Enter your address.');
+ if(!o.cn)err.push('Enter the name of the payer.');if(!o.no)err.push('Enter the receipt number.');if(!o.dt)err.push('Select the receipt date.');
+ if(!(o.amt>0))err.push('Amount received must be greater than zero.');
+ if(o.inv&&!INV_RE.test(o.inv))err.push('Invoice number is not in a valid format.');
+ if(o.tot>0&&o.amt>o.tot&&o.typ!=='Advance payment')err.push('Amount received is more than the invoice total.');
+ o.bal=o.tot>0?r2(o.tot-o.amt):null;
+ if(o.mode==='Cash'&&o.amt>=200000)warn.push('Income-tax law restricts receiving Rs. 2,00,000 or more in cash in a day, for a single transaction or for one event. Please check before accepting this payment.');
+ return {err,warn,o}}
+const B={
+ invoice:()=>calcInvoice({bn:V('b1'),ba:V('b2'),bg:V('b3').toUpperCase(),bc:V('b4'),cn:V('v1'),ca:V('v2'),cg:V('v3').toUpperCase(),no:V('v4'),dt:V('v5'),due:V('v6'),pos:V('v7'),sup:V('v8'),rc:V('v9'),nt:V('v10'),L:items('invoice')}),
+ estimate:()=>calcEstimate({bn:V('b1'),ba:V('b2'),bg:V('b3').toUpperCase(),bc:V('b4'),cn:V('e1'),ca:V('e2'),no:V('e3'),dt:V('e4'),vu:V('e5'),tc:V('e6'),L:items('estimate')}),
+ receipt:()=>calcReceipt({bn:V('b1'),ba:V('b2'),bc:V('b4'),cn:V('r1'),ca:V('r2'),no:V('r3'),dt:V('r4'),amt:parseFloat($('r5').value)||0,mode:V('r6'),ref:V('r7'),typ:V('r8'),inv:V('r9'),tot:parseFloat($('r10').value)||0,tw:V('r11')})};
+function items(k){return [...$(k+'i').querySelectorAll('.it')].map(x=>({d:x.querySelector('.d').value.trim(),h:x.querySelector('.h')?x.querySelector('.h').value.trim():'',q:parseFloat(x.querySelector('.q').value),p:parseFloat(x.querySelector('.p').value),t:parseFloat(x.querySelector('.t').value)}))}
+function addItem(k){const d=document.createElement('div');d.className='g it';
+ d.innerHTML=`<div><label>Description</label><input class='d' value='Item'></div>${k==='invoice'?"<div><label>HSN/SAC code</label><input class='h' inputmode='numeric' maxlength='8'></div>":''}<div><label>Quantity</label><input class='q' type='number' step='any' value='1'></div><div><label>Rate (\u20b9, excluding GST)</label><input class='p' type='number' step='any' value='1000'></div><div><label>GST rate (%)</label><select class='t'>${[0,0.25,1.5,3,5,18,40].map(x=>`<option${x===18?' selected':''}>${x}</option>`).join('')}</select></div><div><button type='button' class='rm' onclick='rmItem(this,"${k}")'>Remove</button></div>`;
+ $(k+'i').appendChild(d)}
+function rmItem(b,k){if($(k+'i').children.length>1){b.closest('.it').remove();hideAll()}}
+const hideAll=()=>document.querySelectorAll('.res').forEach(x=>x.classList.add('hide'));
+const rw=(a,b)=>`<div class='row'><span>${a}</span><b>${b}</b></div>`;
+let CUR='invoice',LAST={};
+const DD={invoice:'A tax invoice is a legal document for a supply of goods or services. Your GSTIN, a unique invoice number, HSN/SAC codes, place of supply and the GST charged must appear on it.',estimate:'An estimate or quotation is a price proposal. It is not a tax invoice, creates no GST liability, and is valid only until the date you set.',receipt:'A payment receipt acknowledges money actually received. It is not a tax invoice, and it records the amount, mode and reference of the payment.'};
+function show(k){CUR=k;['invoice','estimate','receipt'].forEach(x=>$(x).classList.toggle('hide',x!==k));document.querySelectorAll('#dt button').forEach(b=>b.classList.toggle('on',b.dataset.k===k));$('dd').textContent=DD[k];hideAll()}
+$('dt').onclick=e=>{if(e.target.dataset.k){show(e.target.dataset.k)}};
+function run(k){const R=B[k](),box=$(k+'r');
+ if(R.err.length){box.innerHTML="<div class='big'>Please correct the following</div>"+R.err.map(x=>`<div class='row'><span>${x}</span></div>`).join('')}
+ else{const o=R.o,T=o.T;LAST[k]=o;let h='';
+  if(k==='invoice')h=`<div class='big'>Invoice total: ${f2(T.total)}</div>`+rw('Taxable value',f2(T.taxable))+(o.sup==='intra'?rw('CGST',f2(T.cgst))+rw('SGST',f2(T.sgst)):rw('IGST',f2(T.igst)))+rw('Round off',f2(T.round))+rw('Amount in words',words(T.total));
+  if(k==='estimate')h=`<div class='big'>Estimated total: ${f2(T.total)}</div>`+rw('Subtotal',f2(T.taxable))+rw('GST (estimated)',f2(T.tax))+rw('Valid until',dm(o.vu));
+  if(k==='receipt')h=`<div class='big'>Received: ${f2(o.amt)}</div>`+rw('Amount in words',words(o.amt))+(o.bal!==null?rw('Balance due',f2(o.bal)):'')+(R.warn||[]).map(w=>`<p class='warn'>${w}</p>`).join('');
+  box.innerHTML=h+`<button class='cb dl' type='button' onclick="dl('${k}')">Download PDF</button>`}
+ box.classList.remove('hide')}
+async function getD(){if(window.claude&&claude.use)return claude.use('downloads');return{save:async({filename,data})=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([data],{type:'application/pdf'}));a.download=filename;a.click()}}}
+function base(title,sub){const J=window.jspdf&&window.jspdf.jsPDF;if(!J){alert('The PDF tool could not load. Please check your internet connection and try again.');return null}
+ const d=new J();d.setFillColor(29,78,216);d.rect(0,0,210,28,'F');d.setTextColor(255);d.setFont('helvetica','bold');d.setFontSize(18);d.text(title,15,17);d.setFontSize(9);d.setFont('helvetica','normal');d.text(sub,195,17,{align:'right'});d.setTextColor(20,33,61);return d}
+function lines(d,t,x,y,w,fs){d.setFontSize(fs||9.5);const l=d.splitTextToSize(cl(t),w);d.text(l,x,y);return y+l.length*(fs?fs*.45:4.4)}
+function party(d,label,name,addr,gstin,extra,x,y,w){d.setFont('helvetica','bold');d.setFontSize(8.5);d.setTextColor(110);d.text(label,x,y);d.setTextColor(20,33,61);y+=5.5;d.setFontSize(11);d.text(cl(name),x,y);d.setFont('helvetica','normal');y+=1.5;
+ y=lines(d,addr,x,y+4,w);if(gstin)y=lines(d,'GSTIN: '+gstin,x,y+1,w);if(extra)y=lines(d,extra,x,y+1,w);return y}
+function table(d,y,cols,rows){d.setFillColor(232,240,254);d.rect(15,y-5,180,8,'F');d.setFont('helvetica','bold');d.setFontSize(8.5);cols.forEach(c=>d.text(c.h,c.x,y,{align:c.al||'left'}));y+=7;d.setFont('helvetica','normal');
+ rows.forEach(r=>{const ln=d.splitTextToSize(cl(r[1]),cols[1].w),h=ln.length*4.4+2.5;if(y+h>262){d.addPage();y=20}cols.forEach((c,i)=>{if(i===1)d.text(ln,c.x,y);else d.text(cl(r[i]),c.x,y,{align:c.al||'left'})});y+=h;d.setDrawColor(220);d.line(15,y-3.5,195,y-3.5)});return y}
+function totRows(d,y,rows){rows.forEach(([l,v,b])=>{d.setFont('helvetica',b?'bold':'normal');d.setFontSize(b?11:9.5);d.text(l,125,y);d.text(cl(v),195,y,{align:'right'});y+=b?8:6});return y}
+function sign(d,y,who,left){if(y>250){d.addPage();y=30}y=Math.max(y+12,235);d.setFont('helvetica','normal');d.setFontSize(9);d.setDrawColor(120);
+ if(left){d.line(15,y,85,y);d.text(left,15,y+5)}d.line(125,y,195,y);d.text('For '+cl(who).slice(0,40),195,y-3,{align:'right'});d.text('Authorised Signatory',195,y+5,{align:'right'});return y}
+function foot(d,t){d.setFont('helvetica','italic');d.setFontSize(8);d.setTextColor(110);d.text(t,105,289,{align:'center'});d.setTextColor(20,33,61)}
+const pdf={
+ invoice(o){const d=base('TAX INVOICE','Original for Recipient');if(!d)return null;
+  const y1=party(d,'SUPPLIER',o.bn,o.ba,o.bg,o.bc,15,38,90);
+  d.setFont('helvetica','normal');d.setFontSize(9.5);let y=38;[['Invoice No.',o.no],['Invoice Date',dm(o.dt)],['Due Date',o.due?dm(o.due):'-'],['Place of Supply',o.pos],['Reverse Charge',o.rc]].forEach(([a,b])=>{d.setFont('helvetica','bold');d.text(a+':',120,y);d.setFont('helvetica','normal');d.text(cl(b).slice(0,34),152,y);y+=6});
+  let yy=Math.max(y1,y)+4;const y2=party(d,'BILL TO (RECIPIENT)',o.cn,o.ca,o.cg||'',o.cg?'':'GSTIN: Unregistered / not provided',15,yy,90);yy=y2+8;
+  const cols=[{h:'Sr',x:15},{h:'Description',x:21,w:58},{h:'HSN/SAC',x:82},{h:'Qty',x:112,al:'right'},{h:'Rate (Rs.)',x:132,al:'right'},{h:'Taxable (Rs.)',x:156,al:'right'},{h:'GST %',x:170,al:'right'},{h:'GST (Rs.)',x:195,al:'right'}];
+  yy=table(d,yy,cols,o.L.map((l,i)=>[String(i+1),l.d,l.h||'-',String(l.q),nf(l.p),nf(l.a),String(l.t),nf(l.x)]))+4;
+  const T=o.T,rows=[['Taxable value',f2(T.taxable)]];if(o.sup==='intra'){rows.push(['CGST',f2(T.cgst)],['SGST',f2(T.sgst)])}else rows.push(['IGST',f2(T.igst)]);
+  rows.push(['Round off',f2(T.round)],['Invoice total',f2(T.total),1]);yy=totRows(d,yy,rows);
+  d.setFont('helvetica','bold');d.setFontSize(9);d.text('Amount in words:',15,yy+2);yy=lines(d,words(T.total),15,yy+7,175);
+  if(o.nt){d.setFont('helvetica','bold');d.text('Notes / bank details:',15,yy+3);d.setFont('helvetica','normal');yy=lines(d,o.nt,15,yy+8,175)}
+  d.setFont('helvetica','normal');yy=lines(d,'Declaration: We declare that this invoice shows the actual price of the goods or services described and that all particulars are true and correct.',15,yy+5,175,8.5);
+  sign(d,yy,o.bn);foot(d,'This is a computer-generated tax invoice. Generated using CalcHub.');return d},
+ estimate(o){const d=base('ESTIMATE / QUOTATION','Not a tax invoice');if(!d)return null;
+  const y1=party(d,'FROM',o.bn,o.ba,o.bg,o.bc,15,38,90);let y=38;
+  [['Estimate No.',o.no],['Date',dm(o.dt)],['Valid Until',dm(o.vu)]].forEach(([a,b])=>{d.setFont('helvetica','bold');d.setFontSize(9.5);d.text(a+':',120,y);d.setFont('helvetica','normal');d.text(cl(b).slice(0,30),152,y);y+=6});
+  let yy=Math.max(y1,y)+4;const y2=party(d,'PREPARED FOR',o.cn,o.ca,'','',15,yy,90);yy=y2+8;
+  const cols=[{h:'Sr',x:15},{h:'Description',x:21,w:80},{h:'Qty',x:116,al:'right'},{h:'Rate (Rs.)',x:140,al:'right'},{h:'Amount (Rs.)',x:166,al:'right'},{h:'GST %',x:195,al:'right'}];
+  yy=table(d,yy,cols,o.L.map((l,i)=>[String(i+1),l.d,String(l.q),nf(l.p),nf(l.a),String(l.t)]))+4;
+  const T=o.T;yy=totRows(d,yy,[['Subtotal',f2(T.taxable)],['GST (estimated)',f2(T.tax)],['Estimated total',f2(T.total),1]]);
+  d.setFont('helvetica','bold');d.setFontSize(9);d.text('Amount in words:',15,yy+2);yy=lines(d,words(T.total),15,yy+7,175);
+  if(o.tc){d.setFont('helvetica','bold');d.text('Terms and conditions:',15,yy+3);d.setFont('helvetica','normal');yy=lines(d,o.tc,15,yy+8,175)}
+  d.setFont('helvetica','normal');yy=lines(d,'This estimate is for quotation purposes only and is valid until '+dm(o.vu)+'. A tax invoice will be issued at the time of supply.',15,yy+5,175,8.5);
+  sign(d,yy,o.bn,'Customer acceptance (signature and date)');foot(d,'This is a quotation and not a tax invoice. Generated using CalcHub.');return d},
+ receipt(o){const d=base('PAYMENT RECEIPT','Acknowledgement of payment');if(!d)return null;
+  const y1=party(d,'RECEIVED BY',o.bn,o.ba,'',o.bc,15,38,90);let y=38;
+  [['Receipt No.',o.no],['Date',dm(o.dt)],['Payment Type',o.typ]].forEach(([a,b])=>{d.setFont('helvetica','bold');d.setFontSize(9.5);d.text(a+':',120,y);d.setFont('helvetica','normal');d.text(cl(b).slice(0,30),152,y);y+=6});
+  let yy=Math.max(y1,y)+6;d.setFillColor(232,240,254);d.roundedRect(15,yy,180,22,3,3,'F');d.setFont('helvetica','bold');d.setFontSize(10);d.setTextColor(29,78,216);d.text('AMOUNT RECEIVED',21,yy+8);d.setFontSize(18);d.text(cl(f2(o.amt)),189,yy+15,{align:'right'});d.setTextColor(20,33,61);yy+=32;
+  d.setFont('helvetica','normal');yy=lines(d,'Received with thanks from '+o.cn+(o.ca?', '+o.ca:'')+' the sum of '+words(o.amt)+' by '+o.mode+(o.ref?' (Ref: '+o.ref+')':'')+(o.tw?' towards '+o.tw:'')+(o.inv?' against Invoice No. '+o.inv:'')+'.',15,yy,175,10.5)+6;
+  const rows=[['Payer',o.cn],['Payment mode',o.mode],['Reference',o.ref||'-'],['Payment type',o.typ]];if(o.inv)rows.push(['Against invoice',o.inv]);
+  if(o.tot>0){rows.push(['Invoice total',f2(o.tot)],['Amount received',f2(o.amt)],['Balance due',f2(o.bal)])}
+  rows.forEach(([a,b])=>{d.setFont('helvetica','bold');d.setFontSize(9.5);d.text(a,21,yy);d.setFont('helvetica','normal');d.text(cl(b).slice(0,60),90,yy);d.setDrawColor(220);d.line(15,yy+2,195,yy+2);yy+=8});
+  if(o.typ==='Advance payment')yy=lines(d,'This is an advance payment and will be adjusted against the tax invoice issued at the time of supply.',15,yy+4,175,8.5);
+  sign(d,yy,o.bn,'Payer signature (optional)');foot(d,'This receipt acknowledges payment only and is not a tax invoice. Generated using CalcHub.');return d}};
+async function dl(k){const o=LAST[k];if(!o)return;const doc=pdf[k](o);if(!doc)return;const d=await getD();if(!d){alert('Download is not available.');return}
+ try{await d.save({filename:({invoice:'tax-invoice-',estimate:'estimate-',receipt:'receipt-'})[k]+cl(o.no).replace(/[^\w-]/g,'-')+'.pdf',data:doc.output('arraybuffer')})}catch(e){if(e&&e.code!=='declined')alert('Could not save the PDF.')}}
+addItem('invoice');addItem('estimate');
+$('v5').value=$('e4').value=$('r4').value=today();$('e5').value=addDays(today(),15);
+document.addEventListener('input',hideAll);document.addEventListener('change',hideAll);
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&/INPUT|SELECT/.test(e.target.tagName)){e.preventDefault();run(CUR)}});
+const hv=()=>{const h=window.DOCT||location.hash.slice(1);show(['invoice','estimate','receipt'].includes(h)?h:'invoice')};hv();addEventListener('hashchange',hv);
+</script>
+</body></html>
