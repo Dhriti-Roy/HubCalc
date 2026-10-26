@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://YOUR-DOMAIN.com/</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/gst-calculator</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/emi-calculator</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/sip-calculator</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/income-tax-calculator</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/hra-calculator</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/discount-calculator</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/revenue-forecaster</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/gst-rate-finder</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/billing</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/invoice-generator</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/estimate-generator</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/receipt-generator</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/privacy-policy</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/terms-and-conditions</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/disclaimer</loc></url>
-<url><loc>https://YOUR-DOMAIN.com/contact</loc></url>
+<url><loc>https://hubcalc.vercel.app/</loc></url>
+<url><loc>https://hubcalc.vercel.app/gst-calculator</loc></url>
+<url><loc>https://hubcalc.vercel.app/emi-calculator</loc></url>
+<url><loc>https://hubcalc.vercel.app/sip-calculator</loc></url>
+<url><loc>https://hubcalc.vercel.app/income-tax-calculator</loc></url>
+<url><loc>https://hubcalc.vercel.app/hra-calculator</loc></url>
+<url><loc>https://hubcalc.vercel.app/discount-calculator</loc></url>
+<url><loc>https://hubcalc.vercel.app/revenue-forecaster</loc></url>
+<url><loc>https://hubcalc.vercel.app/gst-rate-finder</loc></url>
+<url><loc>https://hubcalc.vercel.app/billing</loc></url>
+<url><loc>https://hubcalc.vercel.app/invoice-generator</loc></url>
+<url><loc>https://hubcalc.vercel.app/estimate-generator</loc></url>
+<url><loc>https://hubcalc.vercel.app/receipt-generator</loc></url>
+<url><loc>https://hubcalc.vercel.app/privacy-policy</loc></url>
+<url><loc>https://hubcalc.vercel.app/terms-and-conditions</loc></url>
+<url><loc>https://hubcalc.vercel.app/disclaimer</loc></url>
+<url><loc>https://hubcalc.vercel.app/contact</loc></url>
 </urlset>
