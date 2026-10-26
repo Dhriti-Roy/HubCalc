@@ -67,6 +67,7 @@ header h1{font-weight:700;letter-spacing:-.01em}
 .rm{margin-top:6px;border:1px solid var(--bd);background:var(--bg);color:var(--mu);border-radius:8px;padding:6px 12px;cursor:pointer;font:13px inherit}
 .note{background:var(--pr2);border-left:4px solid #1d4ed8;padding:10px 14px;border-radius:8px;font-size:14px;margin:12px 0}
 .warn{color:#b45309;font-size:14px;margin-top:8px}
+.seller-disclaimer{font-size:11px;line-height:1.45;color:var(--mu);margin:10px 0 0}
 </style></head><body>
 <nav class="nv"><div class="w nvi"><a class="lg0" href="index.html"><span class="mk">C</span>CalcHub</a><div class="nl"><a class="hot" href="gst-calculator.html">GST Calculator</a><a class="hot2" href="billing.html">Billing</a><a href="index.html">All Calculators</a><a href="contact.html">Contact</a></div><div class="th"><button id="tl" class="on" onclick="setTheme('light')">Light</button><button id="td" onclick="setTheme('dark')">Dark</button></div></div></nav>
 <main class="w">
@@ -78,7 +79,7 @@ header h1{font-weight:700;letter-spacing:-.01em}
 <section class="card"><h2>Your business details</h2><div class="g">
 <div><label>Business name</label><input id="b1" placeholder="Registered or trade name"></div>
 <div><label>Address</label><input id="b2" placeholder="Street, city, state, PIN"></div>
-<div><label>GSTIN (required for a tax invoice)</label><input id="b3" placeholder="e.g. 10ABCDE1234F1Z5" maxlength="15"></div>
+<div><label for="b3">Business GSTIN <span id="gstinRequirement">(required for a tax invoice)</span></label><input id="b3" placeholder="e.g. 10ABCDE1234F1Z5" maxlength="15" autocomplete="off" autocapitalize="characters" spellcheck="false"><small id="gstinHelp" class="mu">Required for Tax Invoice; optional for Estimate and Payment Receipt.</small></div>
 <div><label>Phone or email (optional)</label><input id="b4"></div></div></section>
 
 <section class="card hide" id="invoice"><h2>Tax Invoice</h2><div class="g">
@@ -94,7 +95,7 @@ header h1{font-weight:700;letter-spacing:-.01em}
 <div><label>Bank details or notes (optional)</label><input id="v10"></div></div>
 <h2 style="margin-top:20px">Items</h2><div id="invoicei"></div>
 <button class="cb sec" type="button" onclick="addItem('invoice')">Add another item</button>
-<button class="cb" type="button" onclick="run('invoice')">Calculate</button><div class="res hide" id="invoicer"></div></section>
+<button class="cb" type="button" onclick="run('invoice')">Calculate</button><div class="res hide" id="invoicer"></div><p class="seller-disclaimer">Disclaimer: The seller is solely responsible for this document and its contents. CalcHub only provides the tool and is not responsible for the seller’s billing, estimate, tax invoice or receipt.</p></section>
 
 <section class="card hide" id="estimate"><h2>Estimate / Quotation</h2><div class="g">
 <div><label>Prepared for (customer name)</label><input id="e1"></div>
@@ -105,7 +106,7 @@ header h1{font-weight:700;letter-spacing:-.01em}
 <div><label>Terms and conditions</label><input id="e6" value="Prices are estimates and may change. GST will be charged at the rate applicable at the time of invoicing."></div></div>
 <h2 style="margin-top:20px">Items</h2><div id="estimatei"></div>
 <button class="cb sec" type="button" onclick="addItem('estimate')">Add another item</button>
-<button class="cb" type="button" onclick="run('estimate')">Calculate</button><div class="res hide" id="estimater"></div></section>
+<button class="cb" type="button" onclick="run('estimate')">Calculate</button><div class="res hide" id="estimater"></div><p class="seller-disclaimer">Disclaimer: The seller is solely responsible for this document and its contents. CalcHub only provides the tool and is not responsible for the seller’s billing, estimate, tax invoice or receipt.</p></section>
 
 <section class="card hide" id="receipt"><h2>Payment Receipt</h2><div class="g">
 <div><label>Received from</label><input id="r1"></div>
@@ -119,7 +120,7 @@ header h1{font-weight:700;letter-spacing:-.01em}
 <div><label>Against invoice number (optional)</label><input id="r9" maxlength="16"></div>
 <div><label>Total invoice amount (&#8377;, optional)</label><input id="r10" type="number" step="any"></div>
 <div><label>Payment received towards</label><input id="r11" placeholder="e.g. Web design services"></div></div>
-<button class="cb" type="button" onclick="run('receipt')">Calculate</button><div class="res hide" id="receiptr"></div></section>
+<button class="cb" type="button" onclick="run('receipt')">Calculate</button><div class="res hide" id="receiptr"></div><p class="seller-disclaimer">Disclaimer: The seller is solely responsible for this document and its contents. CalcHub only provides the tool and is not responsible for the seller’s billing, estimate, tax invoice or receipt.</p></section>
 
 <div class="ad">Advertisement</div>
 <section class="card"><h2>How these three documents differ</h2><div class="sg">
@@ -138,7 +139,7 @@ const r2=n=>Math.round((n+Number.EPSILON)*100)/100;
 const nf=n=>n.toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2});
 const f2=n=>'\u20b9'+nf(n);
 const cl=s=>String(s).replace(/\u20b9/g,'Rs. ').replace(/[\u2212\u2013]/g,'-').replace(/\s+/g,' ').trim();
-const GST_RE=/^(0[1-9]|[12]\d|3[0-8])[A-Z]{5}\d{4}[A-Z][1-9A-Z]Z[0-9A-Z]$/;
+const GST_RE=/^(0[1-9]|[12]\d|3[0-8]|97|99)[A-Z]{5}\d{4}[A-Z][1-9A-Z]Z[0-9A-Z]$/;
 const INV_RE=/^[A-Za-z0-9\/-]{1,16}$/;
 const today=()=>new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
 const addDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};
@@ -155,7 +156,7 @@ function totals(L,intra){const taxable=r2(L.reduce((s,o)=>s+o.a,0)),tax=r2(L.red
  return {taxable,tax,cgst:intra?cg:0,sgst:intra?sg:0,igst:intra?0:tax,grand,round:r2(total-grand),total}}
 function checkItems(L,err){if(!L.length)err.push('Add at least one item.');L.forEach((o,i)=>{if(!o.d)err.push('Item '+(i+1)+': enter a description.');if(!(o.q>0))err.push('Item '+(i+1)+': quantity must be greater than zero.');if(!(o.p>=0))err.push('Item '+(i+1)+': enter a valid rate.')})}
 function calcInvoice(o){const err=[];if(!o.bn)err.push('Enter your business name.');if(!o.ba)err.push('Enter your address.');
- if(!GST_RE.test(o.bg))err.push('Enter a valid 15-character GSTIN for your business.');
+ if(!GST_RE.test(o.bg))err.push('Enter a GSTIN in the expected 15-character format. This check does not verify GST registration status.');
  if(o.cg&&!GST_RE.test(o.cg))err.push('Customer GSTIN is not in a valid format.');
  if(!o.cn)err.push('Enter the customer name.');if(!o.ca)err.push('Enter the customer address.');
  if(!INV_RE.test(o.no))err.push('Invoice number must be 1 to 16 characters using letters, numbers, hyphen or slash.');
@@ -163,7 +164,7 @@ function calcInvoice(o){const err=[];if(!o.bn)err.push('Enter your business name
  if(!o.pos)err.push('Enter the place of supply.');
  o.L=o.L.map(lineCalc);checkItems(o.L,err);o.T=totals(o.L,o.sup==='intra');return {err,o}}
 function calcEstimate(o){const err=[];if(!o.bn)err.push('Enter your business name.');if(!o.ba)err.push('Enter your address.');
- if(o.bg&&!GST_RE.test(o.bg))err.push('Your GSTIN is not in a valid format.');
+ if(o.bg&&!GST_RE.test(o.bg))err.push('Your GSTIN does not match the expected format. Leave it blank if you do not want to provide it.');
  if(!o.cn)err.push('Enter the customer name.');if(!o.no)err.push('Enter the estimate number.');if(!o.dt)err.push('Select the estimate date.');
  if(!o.vu)err.push('Select the validity date.');else if(o.dt&&o.vu<o.dt)err.push('Valid-until date cannot be before the estimate date.');
  o.L=o.L.map(lineCalc);checkItems(o.L,err);o.T=totals(o.L,true);return {err,o}}
@@ -188,7 +189,7 @@ const hideAll=()=>document.querySelectorAll('.res').forEach(x=>x.classList.add('
 const rw=(a,b)=>`<div class='row'><span>${a}</span><b>${b}</b></div>`;
 let CUR='invoice',LAST={};
 const DD={invoice:'A tax invoice is a legal document for a supply of goods or services. Your GSTIN, a unique invoice number, HSN/SAC codes, place of supply and the GST charged must appear on it.',estimate:'An estimate or quotation is a price proposal. It is not a tax invoice, creates no GST liability, and is valid only until the date you set.',receipt:'A payment receipt acknowledges money actually received. It is not a tax invoice, and it records the amount, mode and reference of the payment.'};
-function show(k){CUR=k;['invoice','estimate','receipt'].forEach(x=>$(x).classList.toggle('hide',x!==k));document.querySelectorAll('#dt button').forEach(b=>b.classList.toggle('on',b.dataset.k===k));$('dd').textContent=DD[k];hideAll()}
+function show(k){CUR=k;['invoice','estimate','receipt'].forEach(x=>$(x).classList.toggle('hide',x!==k));document.querySelectorAll('#dt button').forEach(b=>b.classList.toggle('on',b.dataset.k===k));$('dd').textContent=DD[k];$('gstinRequirement').textContent=k==='invoice'?'(required for a tax invoice)':'(optional for this document)';$('gstinHelp').textContent=k==='invoice'?'Required for Tax Invoice. Format is checked locally; registration status is not verified.':'Optional for '+(k==='estimate'?'Estimate / Quotation':'Payment Receipt')+'. It will not block document generation.';hideAll()}
 $('dt').onclick=e=>{if(e.target.dataset.k){show(e.target.dataset.k)}};
 function run(k){const R=B[k](),box=$(k+'r');
  if(R.err.length){box.innerHTML="<div class='big'>Please correct the following</div>"+R.err.map(x=>`<div class='row'><span>${x}</span></div>`).join('')}
@@ -209,7 +210,7 @@ function table(d,y,cols,rows){d.setFillColor(232,240,254);d.rect(15,y-5,180,8,'F
 function totRows(d,y,rows){rows.forEach(([l,v,b])=>{d.setFont('helvetica',b?'bold':'normal');d.setFontSize(b?11:9.5);d.text(l,125,y);d.text(cl(v),195,y,{align:'right'});y+=b?8:6});return y}
 function sign(d,y,who,left){if(y>250){d.addPage();y=30}y=Math.max(y+12,235);d.setFont('helvetica','normal');d.setFontSize(9);d.setDrawColor(120);
  if(left){d.line(15,y,85,y);d.text(left,15,y+5)}d.line(125,y,195,y);d.text('For '+cl(who).slice(0,40),195,y-3,{align:'right'});d.text('Authorised Signatory',195,y+5,{align:'right'});return y}
-function foot(d,t){d.setFont('helvetica','italic');d.setFontSize(8);d.setTextColor(110);d.text(t,105,289,{align:'center'});d.setTextColor(20,33,61)}
+function foot(d,t){d.setFont('helvetica','normal');d.setFontSize(7.2);d.setTextColor(110);d.text('Seller is solely responsible for this document and its contents; CalcHub is not responsible for them.',105,282,{align:'center'});d.setFont('helvetica','italic');d.setFontSize(8);d.text(t,105,289,{align:'center'});d.setTextColor(20,33,61)}
 const pdf={
  invoice(o){const d=base('TAX INVOICE','Original for Recipient');if(!d)return null;
   const y1=party(d,'SUPPLIER',o.bn,o.ba,o.bg,o.bc,15,38,90);
@@ -248,6 +249,7 @@ async function dl(k){const o=LAST[k];if(!o)return;const doc=pdf[k](o);if(!doc)re
  try{await d.save({filename:({invoice:'tax-invoice-',estimate:'estimate-',receipt:'receipt-'})[k]+cl(o.no).replace(/[^\w-]/g,'-')+'.pdf',data:doc.output('arraybuffer')})}catch(e){if(e&&e.code!=='declined')alert('Could not save the PDF.')}}
 addItem('invoice');addItem('estimate');
 $('v5').value=$('e4').value=$('r4').value=today();$('e5').value=addDays(today(),15);
+$('b3').addEventListener('input',()=>{$('b3').value=$('b3').value.toUpperCase().replace(/\s+/g,'');});
 document.addEventListener('input',hideAll);document.addEventListener('change',hideAll);
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&/INPUT|SELECT/.test(e.target.tagName)){e.preventDefault();run(CUR)}});
 const hv=()=>{const h=window.DOCT||location.hash.slice(1);show(['invoice','estimate','receipt'].includes(h)?h:'invoice')};hv();addEventListener('hashchange',hv);
