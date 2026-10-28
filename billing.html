@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Billing: GST Invoice, Estimate and Receipt Generator | CalcHub</title><meta name="description" content="Create a GST tax invoice, an estimate or quotation and a payment receipt as PDF. Each document has its own correct format."><meta name="robots" content="index,follow"><meta name="theme-color" content="#1d4ed8"><link rel="canonical" href="https://hubcalc.vercel.app/billing"><meta property="og:title" content="Billing: GST Invoice, Estimate and Receipt Generator | CalcHub"><meta property="og:description" content="Create a GST tax invoice, an estimate or quotation and a payment receipt as PDF. Each document has its own correct format."><meta property="og:type" content="website"><meta property="og:site_name" content="CalcHub"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Ctext x='32' y='45' font-size='38' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet"><style>
+<html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Billing: GST Invoice, Estimate and Receipt Generator | RupeeHubCalc</title><meta name="description" content="Create a GST tax invoice, an estimate or quotation and a payment receipt as PDF. Each document has its own correct format."><meta name="robots" content="index,follow"><meta name="theme-color" content="#1d4ed8"><link rel="canonical" href="https://hubcalc.vercel.app/billing"><meta property="og:title" content="Billing: GST Invoice, Estimate and Receipt Generator | RupeeHubCalc"><meta property="og:description" content="Create a GST tax invoice, an estimate or quotation and a payment receipt as PDF. Each document has its own correct format."><meta property="og:type" content="website"><meta property="og:site_name" content="RupeeHubCalc"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Ctext x='32' y='45' font-size='38' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet"><style>
 :root{--bg:#f6f8fb;--card:#fff;--tx:#14213d;--mu:#5b6b85;--pr:#1d4ed8;--pr2:#e8f0fe;--bd:#dde4ee;--ad:#eef1f6}
 
 :root[data-theme="dark"]{--bg:#0e1522;--card:#17202f;--tx:#e8eef8;--mu:#9aa8c0;--pr:#60a5fa;--pr2:#14284a;--bd:#27344a;--ad:#1b2536}
@@ -70,7 +70,7 @@ header h1{font-weight:700;letter-spacing:-.01em}
 .seller-disclaimer{font-size:11px;line-height:1.45;color:var(--mu);margin:10px 0 0}
 </style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1096441606854906"
      crossorigin="anonymous"></script></head><body>
-<nav class="nv"><div class="w nvi"><a class="lg0" href="index.html"><span class="mk">C</span>CalcHub</a><div class="nl"><a class="hot" href="billing.html">Billing</a><a class="hot2" href="gst-calculator.html">GST Calculator</a><a class="hot2" href="index.html">Back to Dashboard</a></div><div class="th"><button id="tl" class="on" onclick="setTheme('light')">Light</button><button id="td" onclick="setTheme('dark')">Dark</button></div></div></nav>
+<nav class="nv"><div class="w nvi"><a class="lg0" href="index.html"><span class="mk">C</span>RupeeHubCalc</a><div class="nl"><a class="hot" href="billing.html">Billing</a><a class="hot2" href="gst-calculator.html">GST Calculator</a><a class="hot2" href="index.html">Back to Dashboard</a></div><div class="th"><button id="tl" class="on" onclick="setTheme('light')">Light</button><button id="td" onclick="setTheme('dark')">Dark</button></div></div></nav>
 <main class="w">
 <div class="ad">Advertisement</div>
 <h1 class="pt">Billing: Invoice, Estimate and Receipt</h1>
@@ -96,7 +96,7 @@ header h1{font-weight:700;letter-spacing:-.01em}
 <div><label>Bank details or notes (optional)</label><input id="v10"></div></div>
 <h2 style="margin-top:20px">Items</h2><div id="invoicei"></div>
 <button class="cb sec" type="button" onclick="addItem('invoice')">Add another item</button>
-<button class="cb" type="button" onclick="run('invoice')">Calculate</button><div class="res hide" id="invoicer"></div><p class="seller-disclaimer">Disclaimer: The seller is solely responsible for this document and its contents. CalcHub only provides the tool and is not responsible for the seller’s billing, estimate, tax invoice or receipt.</p></section>
+<button class="cb" type="button" onclick="run('invoice')">Calculate</button><div class="res hide" id="invoicer"></div><p class="seller-disclaimer">Disclaimer: The seller is solely responsible for this document and its contents. RupeeHubCalc only provides the tool and is not responsible for the seller’s billing, estimate, tax invoice or receipt.</p></section>
 
 <section class="card hide" id="estimate"><h2>Estimate / Quotation</h2><div class="g">
 <div><label>Prepared for (customer name)</label><input id="e1"></div>
@@ -107,7 +107,7 @@ header h1{font-weight:700;letter-spacing:-.01em}
 <div><label>Terms and conditions</label><input id="e6" value="Prices are estimates and may change. GST will be charged at the rate applicable at the time of invoicing."></div></div>
 <h2 style="margin-top:20px">Items</h2><div id="estimatei"></div>
 <button class="cb sec" type="button" onclick="addItem('estimate')">Add another item</button>
-<button class="cb" type="button" onclick="run('estimate')">Calculate</button><div class="res hide" id="estimater"></div><p class="seller-disclaimer">Disclaimer: The seller is solely responsible for this document and its contents. CalcHub only provides the tool and is not responsible for the seller’s billing, estimate, tax invoice or receipt.</p></section>
+<button class="cb" type="button" onclick="run('estimate')">Calculate</button><div class="res hide" id="estimater"></div><p class="seller-disclaimer">Disclaimer: The seller is solely responsible for this document and its contents. RupeeHubCalc only provides the tool and is not responsible for the seller’s billing, estimate, tax invoice or receipt.</p></section>
 
 <section class="card hide" id="receipt"><h2>Payment Receipt</h2><div class="g">
 <div><label>Received from</label><input id="r1"></div>
@@ -121,14 +121,14 @@ header h1{font-weight:700;letter-spacing:-.01em}
 <div><label>Against invoice number (optional)</label><input id="r9" maxlength="16"></div>
 <div><label>Total invoice amount (&#8377;, optional)</label><input id="r10" type="number" step="any"></div>
 <div><label>Payment received towards</label><input id="r11" placeholder="e.g. Web design services"></div></div>
-<button class="cb" type="button" onclick="run('receipt')">Calculate</button><div class="res hide" id="receiptr"></div><p class="seller-disclaimer">Disclaimer: The seller is solely responsible for this document and its contents. CalcHub only provides the tool and is not responsible for the seller’s billing, estimate, tax invoice or receipt.</p></section>
+<button class="cb" type="button" onclick="run('receipt')">Calculate</button><div class="res hide" id="receiptr"></div><p class="seller-disclaimer">Disclaimer: The seller is solely responsible for this document and its contents. RupeeHubCalc only provides the tool and is not responsible for the seller’s billing, estimate, tax invoice or receipt.</p></section>
 
 <section class="card"><h2>How these three documents differ</h2><div class="sg">
 <div class="st"><h3>Tax Invoice</h3><p>A legal document for a supply of goods or services. It carries your GSTIN, a unique invoice number, HSN or SAC codes, place of supply and the GST charged, and is used by the buyer to claim input tax credit.</p></div>
 <div class="st"><h3>Estimate / Quotation</h3><p>A price proposal sent before the work or sale. It is not a tax invoice, carries no tax liability, has a validity date and terms, and the customer may accept it.</p></div>
 <div class="st"><h3>Payment Receipt</h3><p>Acknowledges money actually received. It records the amount, mode, reference and what the payment is for, and is not a tax invoice.</p></div></div></section>
 </main>
-<footer><div class="w"><div class="fg"><div><b class="lg0">CalcHub</b><p>Free financial calculators and billing tools for individuals and businesses in India.</p><p>Email: <a style="display:inline" href="mailto:hubcalc@gmail.com">hubcalc@gmail.com</a></p></div><div><b>Tools</b><a href="gst-calculator.html">GST Calculator</a><a href="billing.html">Billing: Invoice, Estimate, Receipt</a><a href="index.html">All Calculators</a></div><div><b>Legal</b><a href="privacy-policy.html">Privacy Policy</a><a href="terms-and-conditions.html">Terms and Conditions</a><a href="disclaimer.html">Disclaimer</a><a href="contact.html">Contact</a></div></div><p class="fd"><b>Disclaimer:</b> The calculations provided on this platform are for general information and preliminary estimation purposes only and do not constitute professional, financial, tax or legal advice. Users should consult a qualified Chartered Accountant (CA) or tax professional before making any final financial decisions or filing tax returns.</p><p>&copy; 2026 CalcHub. All rights reserved. Created by Dhriti Roy.</p></div></footer>
+<footer><div class="w"><div class="fg"><div><b class="lg0">RupeeHubCalc</b><p>Free financial calculators and billing tools for individuals and businesses in India.</p><p>Email: <a style="display:inline" href="mailto:hubcalc@gmail.com">hubcalc@gmail.com</a></p></div><div><b>Tools</b><a href="gst-calculator.html">GST Calculator</a><a href="billing.html">Billing: Invoice, Estimate, Receipt</a><a href="index.html">All Calculators</a></div><div><b>Legal</b><a href="privacy-policy.html">Privacy Policy</a><a href="terms-and-conditions.html">Terms and Conditions</a><a href="disclaimer.html">Disclaimer</a><a href="contact.html">Contact</a></div></div><p class="fd"><b>Disclaimer:</b> The calculations provided on this platform are for general information and preliminary estimation purposes only and do not constitute professional, financial, tax or legal advice. Users should consult a qualified Chartered Accountant (CA) or tax professional before making any final financial decisions or filing tax returns.</p><p>&copy; 2026 RupeeHubCalc. All rights reserved. Created by Dhriti Roy.</p></div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
@@ -210,7 +210,7 @@ function table(d,y,cols,rows){d.setFillColor(232,240,254);d.rect(15,y-5,180,8,'F
 function totRows(d,y,rows){rows.forEach(([l,v,b])=>{d.setFont('helvetica',b?'bold':'normal');d.setFontSize(b?11:9.5);d.text(l,125,y);d.text(cl(v),195,y,{align:'right'});y+=b?8:6});return y}
 function sign(d,y,who,left){if(y>250){d.addPage();y=30}y=Math.max(y+12,235);d.setFont('helvetica','normal');d.setFontSize(9);d.setDrawColor(120);
  if(left){d.line(15,y,85,y);d.text(left,15,y+5)}d.line(125,y,195,y);d.text('For '+cl(who).slice(0,40),195,y-3,{align:'right'});d.text('Authorised Signatory',195,y+5,{align:'right'});return y}
-function foot(d,t){d.setFont('helvetica','normal');d.setFontSize(7.2);d.setTextColor(110);d.text('Seller is solely responsible for this document and its contents; CalcHub is not responsible for them.',105,282,{align:'center'});d.setFont('helvetica','italic');d.setFontSize(8);d.text(t,105,289,{align:'center'});d.setTextColor(20,33,61)}
+function foot(d,t){d.setFont('helvetica','normal');d.setFontSize(7.2);d.setTextColor(110);d.text('Seller is solely responsible for this document and its contents; RupeeHubCalc is not responsible for them.',105,282,{align:'center'});d.setFont('helvetica','italic');d.setFontSize(8);d.text(t,105,289,{align:'center'});d.setTextColor(20,33,61)}
 const pdf={
  invoice(o){const d=base('TAX INVOICE','Original for Recipient');if(!d)return null;
   const y1=party(d,'SUPPLIER',o.bn,o.ba,o.bg,o.bc,15,38,90);
@@ -223,7 +223,7 @@ const pdf={
   d.setFont('helvetica','bold');d.setFontSize(9);d.text('Amount in words:',15,yy+2);yy=lines(d,words(T.total),15,yy+7,175);
   if(o.nt){d.setFont('helvetica','bold');d.text('Notes / bank details:',15,yy+3);d.setFont('helvetica','normal');yy=lines(d,o.nt,15,yy+8,175)}
   d.setFont('helvetica','normal');yy=lines(d,'Declaration: We declare that this invoice shows the actual price of the goods or services described and that all particulars are true and correct.',15,yy+5,175,8.5);
-  sign(d,yy,o.bn);foot(d,'This is a computer-generated tax invoice. Generated using CalcHub.');return d},
+  sign(d,yy,o.bn);foot(d,'This is a computer-generated tax invoice. Generated using RupeeHubCalc.');return d},
  estimate(o){const d=base('ESTIMATE / QUOTATION','Not a tax invoice');if(!d)return null;
   const y1=party(d,'FROM',o.bn,o.ba,o.bg,o.bc,15,38,90);let y=38;
   [['Estimate No.',o.no],['Date',dm(o.dt)],['Valid Until',dm(o.vu)]].forEach(([a,b])=>{d.setFont('helvetica','bold');d.setFontSize(9.5);d.text(a+':',120,y);d.setFont('helvetica','normal');d.text(cl(b).slice(0,30),152,y);y+=6});
@@ -234,7 +234,7 @@ const pdf={
   d.setFont('helvetica','bold');d.setFontSize(9);d.text('Amount in words:',15,yy+2);yy=lines(d,words(T.total),15,yy+7,175);
   if(o.tc){d.setFont('helvetica','bold');d.text('Terms and conditions:',15,yy+3);d.setFont('helvetica','normal');yy=lines(d,o.tc,15,yy+8,175)}
   d.setFont('helvetica','normal');yy=lines(d,'This estimate is for quotation purposes only and is valid until '+dm(o.vu)+'. A tax invoice will be issued at the time of supply.',15,yy+5,175,8.5);
-  sign(d,yy,o.bn,'Customer acceptance (signature and date)');foot(d,'This is a quotation and not a tax invoice. Generated using CalcHub.');return d},
+  sign(d,yy,o.bn,'Customer acceptance (signature and date)');foot(d,'This is a quotation and not a tax invoice. Generated using RupeeHubCalc.');return d},
  receipt(o){const d=base('PAYMENT RECEIPT','Acknowledgement of payment');if(!d)return null;
   const y1=party(d,'RECEIVED BY',o.bn,o.ba,'',o.bc,15,38,90);let y=38;
   [['Receipt No.',o.no],['Date',dm(o.dt)],['Payment Type',o.typ]].forEach(([a,b])=>{d.setFont('helvetica','bold');d.setFontSize(9.5);d.text(a+':',120,y);d.setFont('helvetica','normal');d.text(cl(b).slice(0,30),152,y);y+=6});
@@ -244,7 +244,7 @@ const pdf={
   if(o.tot>0){rows.push(['Invoice total',f2(o.tot)],['Amount received',f2(o.amt)],['Balance due',f2(o.bal)])}
   rows.forEach(([a,b])=>{d.setFont('helvetica','bold');d.setFontSize(9.5);d.text(a,21,yy);d.setFont('helvetica','normal');d.text(cl(b).slice(0,60),90,yy);d.setDrawColor(220);d.line(15,yy+2,195,yy+2);yy+=8});
   if(o.typ==='Advance payment')yy=lines(d,'This is an advance payment and will be adjusted against the tax invoice issued at the time of supply.',15,yy+4,175,8.5);
-  sign(d,yy,o.bn,'Payer signature (optional)');foot(d,'This receipt acknowledges payment only and is not a tax invoice. Generated using CalcHub.');return d}};
+  sign(d,yy,o.bn,'Payer signature (optional)');foot(d,'This receipt acknowledges payment only and is not a tax invoice. Generated using RupeeHubCalc.');return d}};
 async function dl(k){const o=LAST[k];if(!o)return;const doc=pdf[k](o);if(!doc)return;const d=await getD();if(!d){alert('Download is not available.');return}
  try{await d.save({filename:({invoice:'tax-invoice-',estimate:'estimate-',receipt:'receipt-'})[k]+cl(o.no).replace(/[^\w-]/g,'-')+'.pdf',data:doc.output('arraybuffer')})}catch(e){if(e&&e.code!=='declined')alert('Could not save the PDF.')}}
 addItem('invoice');addItem('estimate');
